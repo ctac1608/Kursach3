@@ -217,9 +217,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Image\Facebook.png" />
-    <Content Include="Content\Image\Twitter.png" />
-    <Content Include="Content\Image\Vkontakte.png" />
+    <Content Include="Content\Images\Facebook.png" />
+    <Content Include="Content\Images\Twitter.png" />
+    <Content Include="Content\Images\Vkontakte.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
