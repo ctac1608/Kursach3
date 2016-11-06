@@ -25,6 +25,12 @@ namespace Kursach3.Models
         {
         }
 
+        //public DbSet<Creative> Creatives { get; set; }
+
+        //public DbSet<Chapter> Chapters { get; set; }
+
+        //public DbSet<Tag> Tags { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
