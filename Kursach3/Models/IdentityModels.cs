@@ -16,6 +16,7 @@ namespace Kursach3.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public string Login { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
