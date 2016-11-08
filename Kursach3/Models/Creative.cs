@@ -16,4 +16,5 @@ namespace Kursach3.Models
         public DateTime RedactData { get; set; }
         public string UserId { get; set; }
     }
+
 }
