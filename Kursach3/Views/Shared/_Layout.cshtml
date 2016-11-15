@@ -23,6 +23,24 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+                
+                    
+                        <form onsubmit="submitFn(this, event);">
+                            <div class="search-wrapper">
+                                <div class="input-holder">
+                                    <input type="text" class="search-input" placeholder="Type to search" />
+                                    <img src="~/Content/Images/lupa.png" style="padding:2px;" class="search-icon" onclick="searchToggle(this, event);"><span></span>
+                                </div>
+                                <span class="close" onclick="searchToggle(this, event);"></span>
+                                <div class="result-container">
+                                </div>
+                            </div>
+                        </form>
+                    
+                    <link href="../../Content/search.css" rel="stylesheet">
+                    
+                    
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -38,5 +56,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/Search.js"></script>
 </body>
 </html>
