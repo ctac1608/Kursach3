@@ -17,6 +17,9 @@ namespace Kursach3.Models
             return userIdentity;
         }
         public string Login { get; set; }
+        public string AvatarUrl { get; set; }
+        public bool CreativesMedal { get; set; }
+        public bool CommentsMedal { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -26,11 +29,11 @@ namespace Kursach3.Models
         {
         }
 
-        //public DbSet<Creative> Creatives { get; set; }
+        public DbSet<Creative> Creatives { get; set; }
 
-        //public DbSet<Chapter> Chapters { get; set; }
+        public DbSet<Chapter> Chapters { get; set; }
 
-        //public DbSet<Tag> Tags { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
         public static ApplicationDbContext Create()
         {
