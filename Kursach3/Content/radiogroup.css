@@ -1,0 +1,10 @@
+﻿#radioBtn .notActive{
+    color: #3276b1;
+    background-color: #fff;
+}
+.radiobutton-position{
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    
+}
