@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-app="createApp">
+    
+    <div class="user-data jumbotron" ng-controller="userDataController">
+        <div class="avatar">
+            <img src="~/Content/Images/user.png" class="img-rounded" />
+        </div>
+        <div>
+            <div>
+                <div class="login">{{user.Login}}</div>
+                <a class="setting" href="/Manage/Index/">
+                    <img src="~/Content/Images/pencil.png" />
+                </a>
+            </div>
+            <div id="medal">
+                <img class="medal" src="http://s1.iconbird.com/ico/1112/Onebit4/w48h481351852735010.png" />
+                <img class="medal" src="http://s1.iconbird.com/ico/1112/Onebit4/w48h481351852735011.png" />
+            </div>
+        </div>
+        <br />
+        <br />
+        <a id="email" href="mailto:{{user.Email}}">{{user.Email}}</a>
+    </div>
+
+    <div class="creatives jumbotron">
+
+        <div id="creatives-header">
+            <div id="add-dialog" ng-controller="createController">
+                <img id="add" ng-click="toggleModal()" src="~/Content/Images/add.png" />
+                <modal-dialog show='modalShown' width='750px' height='60%'>
+                    
+                </modal-dialog>
+            </div>
+            
+
+            <div class="sort btn-group btn-group-s" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+        </div>  
+
+        <div class="creative">
+            <p id="name">Name</p>
+            <p class="date">Date</p>
+            <p class="date">Date</p>
+            <p>Rank</p>
+        </div>
+
+        <div class="creative">
+            <p id="name">Name</p>
+            <p class="date">Date</p>
+            <p class="date">Date</p>
+            <p>Rank</p>
+        </div>
+
+        <div class="creative">
+            <p id="name">Name</p>
+            <p class="date">Date</p>
+            <p class="date">Date</p>
+            <p>Rank</p>
+        </div>
+
+        <p id="point">.</p>
+    </div>
+
+
+</div>
+
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/app.js"></script>
+<script src="~/Scripts/Controllers/userPageController.js"></script>
+<script src="~/Scripts/Services/userPageService.js"></script>
+<script src="~/Scripts/Controllers/createController.js"></script>
+<script src="~/Scripts/Directives/modalDialog.js"></script>

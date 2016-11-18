@@ -1,8 +1,11 @@
-﻿app.controller("creativeController", function ($scope, $http, creativeServise) {
-
-    $scope.creatives = [];
+﻿app.controller("popularCreativeController", function ($scope, creativeService) {
 
     creativeServise.getPopularCreative($scope);
-    //creativeServise.getNewCreative($scope);
+
+});
+
+app.controller("newCreativeController", function ($scope, creativeService) {
+
+    creativeServise.getNewCreative($scope);
 
 });

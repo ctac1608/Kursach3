@@ -3,19 +3,29 @@
 }
 
 <div ng-app="createApp">
-        <div ng-controller="creativeController">
-            <div class="popular well well-sm">
-                <p2>Popular</p2>
-                <div ng-repeat="creative in creatives" class="creative well well-lg">
-                    <a href="#">{{creative.Name}}</a>
-                    <!--<a href="#"><img src="~/Content/Images/Vkontakte.png"/>{{creative.UserId}}</a>-->
-                    <a href="#">{{creative.Rank}}</a>
-                </div>
-            </div>
+        
+    <div ng-controller="popularCreativeController" class="popular well well-sm">
+        <p2>Popular</p2>
+        <div ng-repeat="creative in creatives" class="creative well well-lg">
+            <a href="#">{{creative.Name}}</a>
+            <!--<a href="#"><img src="~/Content/Images/Vkontakte.png"/>{{creative.UserId}}</a>-->
+            <a href="#">{{creative.Rank}}</a>
         </div>
     </div>
+
+    <div ng-controller="newCreativeController" class="new well well-sm">
+        <p2>New</p2>
+        <div ng-repeat="creative in creatives" class="creative well well-lg">
+            <a href="#">{{creative.Name}}</a>
+            <!--<a href="#"><img src="~/Content/Images/Vkontakte.png"/>{{creative.UserId}}</a>-->
+            <a href="#">{{creative.Rank}}</a>
+        </div>
+    </div>
+        
+</div>
 
 
     <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/app.js"></script>
     <script src="~/Scripts/Controllers/creativeController.js"></script>
+    <script src="~/Scripts/Services/creativeService.js"></script>
