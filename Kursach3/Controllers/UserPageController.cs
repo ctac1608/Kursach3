@@ -1,4 +1,5 @@
-﻿using Kursach3.Services;
+﻿using Kursach3.Models;
+using Kursach3.Services;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,11 @@ namespace Kursach3.Controllers
             return UserPageService.GetUserCreatives(User.Identity.GetUserId());
         }
 
+        [HttpPost]
+        public void CreateCreative(Creative creative)
+        {
+            UserPageService.CreateCreative(creative, User.Identity.GetUserId());
+        }
 
     }
 }

@@ -28,5 +28,12 @@ namespace Kursach3.Services
                 return JsonConvert.SerializeObject(creatives);
             }
         }
+
+        public static void CreateCreative(Creative creative, string userId)
+        {
+            Creative newCreative = new Creative(creative, userId);
+
+
+        }
     }
 }

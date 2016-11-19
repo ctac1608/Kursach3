@@ -15,6 +15,17 @@ namespace Kursach3.Models
         public DateTime CreateData { get; set; }
         public DateTime RedactData { get; set; }
         public string UserId { get; set; }
+
+        public Creative(Creative creative, string userId)
+        {
+            Name = creative.Name;
+            Tags = creative.Tags;
+            Rank = 0;
+            Count = 0;
+            CreateData = DateTime.Now;
+            RedactData = DateTime.Now;
+            UserId = userId;
+        }
     }
 
 }
