@@ -101,18 +101,7 @@ a.setting {
     border-radius: 6px;
 }
 .ng-modal-dialog-content {
-    padding:10px;
-    text-align: left;
-}
-.ng-modal-close {
-    position: absolute;
-    height: 24px;
-    width: 24px;
-    top: 3px;
-    right: 26px;
-    padding: 5px;
-    cursor: pointer;
-    display: inline-block;
+    
 }
 
 #add-dialog {

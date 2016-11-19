@@ -1,6 +1,5 @@
-﻿app.controller('createController', function ($scope) {
-    $scope.modalShown = false;
-    $scope.toggleModal = function () {
-        $scope.modalShown = !$scope.modalShown;
-    };
+﻿app.controller("createController", function ($scope, createService) {
+
+    createServise.createCreative($scope);
+
 });

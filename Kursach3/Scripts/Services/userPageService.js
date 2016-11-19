@@ -14,5 +14,15 @@
         });
     };
 
+    this.createCreative = function (scope) {
+        var creative = {
+            Name: scope.Name,
+            Rank: 0,
+            Count: 0
+        };
+        $http.post("/UserPage/CreateCreative/", creative, function () {
+        });
+    };
+
 
 });

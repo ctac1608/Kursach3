@@ -28,10 +28,16 @@
     <div class="creatives jumbotron">
 
         <div id="creatives-header">
-            <div id="add-dialog" ng-controller="createController">
+            <div id="add-dialog" ng-controller="addController">
                 <img id="add" ng-click="toggleModal()" src="~/Content/Images/add.png" />
-                <modal-dialog show='modalShown' width='750px' height='60%'>
-                    
+                <modal-dialog show='modalShown' width='80%' height='90%'>
+                    <div class="input-group">
+                        @*<div><span class="input-group-addon" id="basic-addon1">Name:</span>
+                        <input type="text" class="form-control" ng-model="Name" placeholder="Creative name" aria-describedby="basic-addon1">
+                        </div>
+                        <br />*@
+                        <input type="button" value="Create" ng-click="hideModal()" /> 
+                    </div>
                 </modal-dialog>
             </div>
             
@@ -75,5 +81,7 @@
 <script src="~/Scripts/app.js"></script>
 <script src="~/Scripts/Controllers/userPageController.js"></script>
 <script src="~/Scripts/Services/userPageService.js"></script>
+<script src="~/Scripts/Controllers/addController.js"></script>
 <script src="~/Scripts/Controllers/createController.js"></script>
 <script src="~/Scripts/Directives/modalDialog.js"></script>
+
