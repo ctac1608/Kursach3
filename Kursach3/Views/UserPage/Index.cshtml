@@ -53,7 +53,7 @@
             <p id="name">Name</p>
             <p class="date">Date</p>
             <p class="date">Date</p>
-            <p>Rank</p>
+            <div id="rateYo"></div>
         </div>
 
         <div class="creative">
@@ -84,4 +84,15 @@
 <script src="~/Scripts/Controllers/addController.js"></script>
 <script src="~/Scripts/Controllers/createController.js"></script>
 <script src="~/Scripts/Directives/modalDialog.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/jquery.rateyo.min.js"></script>
+<script>
+    $(function () {
+
+        $("#rateYo").rateYo({
+            rating: 3.6
+        });
+
+    });
+</script>
 
