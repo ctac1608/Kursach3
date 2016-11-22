@@ -7,13 +7,13 @@ namespace Kursach3.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class nnn : IMigrationMetadata
+    public sealed partial class qqq : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(nnn));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(qqq));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611191944593_nnn"; }
+            get { return "201611212258082_qqq"; }
         }
         
         string IMigrationMetadata.Source

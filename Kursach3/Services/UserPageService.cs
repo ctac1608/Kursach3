@@ -31,9 +31,11 @@ namespace Kursach3.Services
 
         public static void CreateCreative(Creative creative, string userId)
         {
-            Creative newCreative = new Creative(creative, userId);
-
-
+            using (var db = new ApplicationDbContext())
+            {
+                db.Creatives.Add(new Creative(creative, userId));
+                db.SaveChanges();
+            }
         }
     }
 }
