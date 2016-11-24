@@ -6,7 +6,7 @@
     
     <div class="user-data jumbotron" ng-controller="userDataController">
         <div class="avatar">
-            <img src="~/Content/Images/user.png" class="img-rounded" />
+            <img src="{{user.AvatarUrl}}" class="file__drop img-rounded" data-image data-image-uploader />
         </div>
         <div>
             <div>
@@ -71,8 +71,7 @@
 
                         <br />
                     <div class="col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
-                        <button type="button" class="btn btn-default btn-lg">Сохранить креатив</button>
-
+                        <button type="button" class="btn btn-default btn-lg" ng-click="createCreative()">Сохранить креатив</button>
                     </div>
                     
                 </modal-dialog>
@@ -80,9 +79,9 @@
             
 
             <div class="sort btn-group btn-group-s" role="group" aria-label="...">
-                <button type="button" class="btn btn-default">Left</button>
-                <button type="button" class="btn btn-default">Middle</button>
-                <button type="button" class="btn btn-default">Right</button>
+                <button type="button" class="btn btn-default">A-Я</button>
+                <button type="button" class="btn btn-default">Last edit</button>
+                <button type="button" class="btn btn-default">New</button>
             </div>
         </div>  
 
@@ -133,5 +132,104 @@
         });
 
     });
+</script>
+<script>
+    $('body').on({ 'drop dragover dragenter': dropHandler }, '[data-image-uploader]');
+    $('body').on({ 'change': regularImageUpload }, '#file');
+
+    function regularImageUpload(e) {
+        var file = $(this)[0],
+            type = file.files[0].type.toLocaleLowerCase();
+
+        if (type.match(/jpg/) !== null ||
+           type.match(/jpeg/) !== null ||
+           type.match(/png/) !== null ||
+           type.match(/gif/) !== null) {
+
+            readUploadedImage(file.files[0]);
+        }
+    }
+
+    function dropHandler(e) {
+        e.preventDefault();
+
+        if (e.type === 'drop' && e.originalEvent.dataTransfer && e.originalEvent.dataTransfer.files.length) {
+
+            var files = e.originalEvent.dataTransfer.files,
+				type = files[0].type.toLocaleLowerCase();
+
+            if (type.match(/jpg/) !== null ||
+				type.match(/jpeg/) !== null ||
+				type.match(/png/) !== null ||
+				type.match(/gif/) !== null) {
+
+                readUploadedImage(files[0]);
+
+            }
+
+        }
+
+        return false;
+    }
+
+    function readUploadedImage(img) {
+        var reader;
+
+        if (window.FileReader) {
+            reader = new FileReader();
+            reader.readAsDataURL(img);
+
+            reader.onload = function (file) {
+                if (file.target && file.target.result) {
+                    imageLoader(file.target.result, displayImage);
+                }
+
+            };
+
+            reader.onerror = function () {
+                throw new Error('Something went wrong!');
+            };
+
+        } else {
+            throw new Error('FileReader not supported!');
+        }
+
+    }
+
+    function imageLoader(src, callback) {
+        var img;
+
+        img = new Image();
+
+        img.src = src;
+
+        jQuery.ajax({
+            type: "POST",
+            url: "/UserPage/ChangeAvatar",
+            data: JSON.stringify({ src: src }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json"
+        });
+        
+        img.onload = function () {
+            imageResizer(img, callback);
+        }
+
+    }
+
+    function imageResizer(img, callback) {
+        var canvas = document.createElement('canvas');
+        canvas.width = 200;
+        canvas.height = 200;
+        context = canvas.getContext('2d');
+        context.drawImage(img, 0, 0, 200, 200);
+
+        callback(canvas.toDataURL());
+
+    }
+
+    function displayImage(img) {
+        $('[data-image]').attr('src', img);
+    }
 </script>
 

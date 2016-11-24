@@ -112,3 +112,14 @@ a.setting {
 .form-module{
     margin-top: 13px;
 }
+
+#file {
+    display:none;
+}
+
+.file__drop {
+    display: block;
+    width: 256px;
+    height: 256px;
+    line-height: 256px;
+}

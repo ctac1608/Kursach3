@@ -96,6 +96,22 @@ namespace Kursach3
         {
         }
 
+        public override async Task<SignInStatus> PasswordSignInAsync(string userName, string password, bool isPersistent, bool shouldLockout)
+        {
+            var result = await base.PasswordSignInAsync(userName, password, isPersistent, shouldLockout);
+            using (var db = new ApplicationDbContext())
+            {
+                var user = db.Users.Single(u => u.UserName == userName);
+                if (user.Ban == true)
+                {
+                    base.AuthenticationManager.SignOut();
+                    return SignInStatus.LockedOut;
+                }
+
+            }
+            return result;
+        }
+
         public override Task<ClaimsIdentity> CreateUserIdentityAsync(ApplicationUser user)
         {
             return user.GenerateUserIdentityAsync((ApplicationUserManager)UserManager);
