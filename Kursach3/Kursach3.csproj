@@ -212,17 +212,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611212258082_qqq.cs" />
-    <Compile Include="Migrations\201611212258082_qqq.Designer.cs">
-      <DependentUpon>201611212258082_qqq.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611231104381_www.cs" />
-    <Compile Include="Migrations\201611231104381_www.Designer.cs">
-      <DependentUpon>201611231104381_www.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611241526033_eee.cs" />
-    <Compile Include="Migrations\201611241526033_eee.Designer.cs">
-      <DependentUpon>201611241526033_eee.cs</DependentUpon>
+    <Compile Include="Migrations\201611241536469_a.cs" />
+    <Compile Include="Migrations\201611241536469_a.Designer.cs">
+      <DependentUpon>201611241536469_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -362,14 +354,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611212258082_qqq.resx">
-      <DependentUpon>201611212258082_qqq.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611231104381_www.resx">
-      <DependentUpon>201611231104381_www.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611241526033_eee.resx">
-      <DependentUpon>201611241526033_eee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611241536469_a.resx">
+      <DependentUpon>201611241536469_a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
