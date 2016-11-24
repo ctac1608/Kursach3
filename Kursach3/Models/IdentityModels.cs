@@ -18,8 +18,8 @@ namespace Kursach3.Models
         }
         public string Login { get; set; }
         public string AvatarUrl { get; set; }
-        public bool CreativesMedal { get; set; }
-        public bool CommentsMedal { get; set; }
+        public int CountCreatives { get; set; }
+        public bool Ban { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

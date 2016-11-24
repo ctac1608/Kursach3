@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kursach3.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,11 +14,30 @@ namespace Kursach3.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpGet]
+        [Authorize]
+        public ActionResult AdminPage()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            using (var db = new ApplicationDbContext())
+            {
+                var users = db.Users.ToList();
+                return View(users);
+            }
         }
+
+        [HttpGet]
+        [Authorize]
+        public ActionResult BanUser(string id)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                var user = db.Users.Find(id);
+                user.Ban = !user.Ban;
+                db.SaveChanges();
+            }
+            return RedirectToAction("AdminPage");
+        }
+
+
     }
 }
