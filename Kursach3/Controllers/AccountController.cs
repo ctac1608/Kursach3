@@ -153,6 +153,7 @@ namespace Kursach3.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Login, Email = model.Email, Login = model.Login };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                await UserManager.AddToRoleAsync(user.Id, "user");
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

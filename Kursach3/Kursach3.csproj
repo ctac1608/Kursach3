@@ -213,9 +213,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611212258082_qqq.cs" />
-    <Compile Include="Migrations\201611212258082_qqq.Designer.cs">
-      <DependentUpon>201611212258082_qqq.cs</DependentUpon>
+    <Compile Include="Migrations\201611241456559_a.cs" />
+    <Compile Include="Migrations\201611241456559_a.Designer.cs">
+      <DependentUpon>201611241456559_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -237,6 +237,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\creating-style.css" />
+    <Content Include="Content\day-night-ru-en-style.css" />
     <Content Include="Content\Images\add.png" />
     <Content Include="Content\Images\add24.png" />
     <Content Include="Content\Images\arrow.png" />
@@ -361,8 +362,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611212258082_qqq.resx">
-      <DependentUpon>201611212258082_qqq.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611241456559_a.resx">
+      <DependentUpon>201611241456559_a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
