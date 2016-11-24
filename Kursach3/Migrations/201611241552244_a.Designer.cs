@@ -13,7 +13,7 @@ namespace Kursach3.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611241456559_a"; }
+            get { return "201611241552244_a"; }
         }
         
         string IMigrationMetadata.Source

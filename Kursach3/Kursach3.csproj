@@ -206,16 +206,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CreativeController.cs" />
-    <Compile Include="Controllers\CreativesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611241456559_a.cs" />
-    <Compile Include="Migrations\201611241456559_a.Designer.cs">
-      <DependentUpon>201611241456559_a.cs</DependentUpon>
+    <Compile Include="Migrations\201611241552244_a.cs" />
+    <Compile Include="Migrations\201611241552244_a.Designer.cs">
+      <DependentUpon>201611241552244_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -240,7 +239,7 @@
     <Content Include="Content\day-night-ru-en-style.css" />
     <Content Include="Content\Images\add.png" />
     <Content Include="Content\Images\add24.png" />
-    <Content Include="Content\Images\arrow.png" />
+    <Content Include="Content\Images\arrow24.png" />
     <Content Include="Content\Images\close.png" />
     <Content Include="Content\Images\Facebook.png" />
     <Content Include="Content\Images\fotomoto.jpg" />
@@ -251,6 +250,7 @@
     <Content Include="Content\Images\Vkontakte.png" />
     <Content Include="Content\jquery.rateyo.css" />
     <Content Include="Content\search.css" />
+    <Content Include="Content\tag-style.css" />
     <Content Include="Content\UserPage.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -304,6 +304,7 @@
     <Content Include="Scripts\Search.js" />
     <Content Include="Scripts\Services\creativeService.js" />
     <Content Include="Scripts\Services\userPageService.js" />
+    <Content Include="Scripts\tag-script.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -362,8 +363,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611241456559_a.resx">
-      <DependentUpon>201611241456559_a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611241552244_a.resx">
+      <DependentUpon>201611241552244_a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
