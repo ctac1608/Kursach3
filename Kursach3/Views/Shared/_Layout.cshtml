@@ -50,6 +50,30 @@
     <div class="container body-content">
         @RenderBody()
     </div>
+    <link href="~/Content/day-night-ru-en-style.css" rel="stylesheet" />
+    <div class="position-switches">
+        <form action="">
+            <fieldset>
+                <span class="moon-sun">
+                    <input type="checkbox" tabindex="32" name="ct0" id="ct0">
+                    <label for="ct0">
+                        <span></span>
+                        <i class="cloud"></i>
+                        <i class="stars"></i>
+                    </label>
+                </span>
+            </fieldset>
+        </form>
+
+        <label class="toggleSwitch xlarge" onclick="">
+            <input type="checkbox" />
+            <span>
+                <span>EN</span>
+                <span>RU</span>
+            </span>
+            <a></a>
+        </label>
+    </div>
 
     @*@Scripts.Render("~/bundles/jquery")*@
     @Scripts.Render("~/bundles/bootstrap")

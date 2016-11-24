@@ -48,13 +48,13 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
 
-                                        <div class="form-group row">
+                                        <div class="form-group row" style="margin-bottom: 0">
                                             <div class="col-xs-10">
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название главы" ng-model="chapter.Name">
                                             </div>
                                             
                                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                    <img src="~/Content/Images/arrow.png" />
+                                                    <img src="~/Content/Images/arrow24.png" />
                                                 </a>
                                             <a href="#"><img src="~/Content/Images/add24.png" style="margin-left:30px;"/></a>
                                         </div>
@@ -64,10 +64,47 @@
                                         <div class="panel-body">
                                             <div id="summernote"><p>Hello Summernote</p></div>
                                         </div>
+
+                                        
+                                        <!--добавление тегов-->
+
+                                        <link href="~/Content/tag-style.css" rel="stylesheet" />
+
+                                        <div class="container" ng-app="tagSearch">
+                                            <div class="row">
+                                                <div>
+                                                    <div class="card" ng-controller="tagSearchController" ng-cloak>
+
+                                                        
+                                                        <input class="form-control input-tags" data-tag-input="" data-ng-model="tagText" placeholder="Введите тег" data-ng-style="{width: inputWidth}" data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
+
+                                                        <div class="tag badge" data-ng-repeat="(id, tag) in tags">
+                                                            {{ tag.name }}
+                                                            <button class="tag-remove" data-ng-click="removeTag(id) ">&times;</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--конец тегов-->
                                     </div>
                                 </div>
                             </div>
                     </div>
+                    <br />
+
+                    <!--=====================================================================================-->
+
+                    @*<div data-ng-repeat="(Id, chapter) in chapters">
+                        {{chapter.Name}}
+                    </div>*@
+                    
+
+                    
+                    <!--=====================================================================================-->
+
+                    
 
                         <br />
                     <div class="col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
@@ -125,6 +162,7 @@
 <script src="~/Scripts/jquery.rateyo.min.js"></script>
 <script src="~/Scripts/summernote.js"></script>
 
+<script src="~/Scripts/tag-script.js"></script>
 <script>
     $(function () {
 

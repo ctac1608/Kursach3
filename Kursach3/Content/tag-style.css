@@ -1,0 +1,20 @@
+﻿
+
+.card {
+  background: #FFF;
+  border-radius: 1px;
+  margin: 0 10px 20px 10px;
+}
+
+.tag {
+  background: #EEE;
+  color: #000;
+}
+
+.tag .tag-remove {
+  border:0;
+  background: #EEE;
+}
+.input-tags{
+    margin-left: 6px;
+}

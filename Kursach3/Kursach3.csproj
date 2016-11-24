@@ -216,17 +216,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611212258082_qqq.cs" />
-    <Compile Include="Migrations\201611212258082_qqq.Designer.cs">
-      <DependentUpon>201611212258082_qqq.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611231104381_www.cs" />
-    <Compile Include="Migrations\201611231104381_www.Designer.cs">
-      <DependentUpon>201611231104381_www.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611241526033_eee.cs" />
-    <Compile Include="Migrations\201611241526033_eee.Designer.cs">
-      <DependentUpon>201611241526033_eee.cs</DependentUpon>
+    <Compile Include="Migrations\201611241552244_a.cs" />
+    <Compile Include="Migrations\201611241552244_a.Designer.cs">
+      <DependentUpon>201611241552244_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -246,26 +238,20 @@
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.darkly.css" />
-    <Content Include="Content\bootstrap.darkly.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\creating-style.css" />
+    <Content Include="Content\day-night-ru-en-style.css" />
     <Content Include="Content\Images\add.png" />
     <Content Include="Content\Images\add24.png" />
-    <Content Include="Content\Images\arrow.png" />
+    <Content Include="Content\Images\arrow24.png" />
     <Content Include="Content\Images\close.png" />
-    <Content Include="Content\Images\crown.png" />
-    <Content Include="Content\Images\FacebookNew.png" />
-    <Content Include="Content\Images\home.png" />
-    <Content Include="Content\Images\login.png" />
-    <Content Include="Content\Images\logout.png" />
+    <Content Include="Content\Images\Facebook.png" />
+    <Content Include="Content\Images\fotomoto.jpg" />
     <Content Include="Content\Images\lupa.png" />
-    <Content Include="Content\Images\man-user.png" />
-    <Content Include="Content\Images\new-user.png" />
     <Content Include="Content\Images\pencil.png" />
-    <Content Include="Content\Images\TwitterNew.png" />
+    <Content Include="Content\Images\Twitter.png" />
     <Content Include="Content\Images\user.png" />
-    <Content Include="Content\Images\VkontakteNew.png" />
+    <Content Include="Content\Images\Vkontakte.png" />
     <Content Include="Content\jquery.rateyo.css" />
     <Content Include="Content\lang\summernote-ar-AR.js" />
     <Content Include="Content\lang\summernote-bg-BG.js" />
@@ -312,6 +298,7 @@
     <Content Include="Content\plugin\specialchars\summernote-ext-specialchars.js" />
     <Content Include="Content\search.css" />
     <Content Include="Content\summernote.css" />
+    <Content Include="Content\tag-style.css" />
     <Content Include="Content\UserPage.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -371,6 +358,7 @@
     <Content Include="Scripts\Services\creativeService.js" />
     <Content Include="Scripts\Services\userPageService.js" />
     <Content Include="Scripts\summernote.js" />
+    <Content Include="Scripts\tag-script.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -414,6 +402,10 @@
     <Folder Include="Views\Creative\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>

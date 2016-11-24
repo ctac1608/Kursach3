@@ -117,3 +117,7 @@ a.setting {
     height: 256px;
     line-height: 256px;
 }
+.button-create-position{
+    margin-bottom:15px;
+    width:50%;
+}
