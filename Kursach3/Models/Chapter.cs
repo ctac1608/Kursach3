@@ -12,5 +12,15 @@ namespace Kursach3.Models
         public string Text { get; set; }
         public int Position { get; set; }
         public int CreativeId { get; set; }
+
+        public Chapter() { }
+
+        public Chapter(Chapter chapter, int creativeId)
+        {
+            Name = chapter.Name;
+            Text = chapter.Text;
+            Position = chapter.Position;
+            CreativeId = creativeId;
+        }
     }
 }

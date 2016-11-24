@@ -3,28 +3,21 @@
     $scope.toggleModal = function () {
         $scope.modalShown = !$scope.modalShown;
     };
+    $scope.hideModal = function () {
+        $scope.modalShown = false;
+    };
 
     $scope.creative = {
-        Name: null
-        
+        Name: null 
+    };
+
+    $scope.chapter = {
+        Name: null,
+        Text: null
     };
 
     $scope.createCreative = function () {
-        console.log($scope.creative);
-
-        var creative = {
-            Id: null,
-            Name: $scope.creative.Name,
-            Rank: null,
-            Count: null,
-            CreateData: null,
-            RedactData: null,
-            UserId: null
-        };
-        
-   //     var creative = Object.create(creativee);
-
-        $http.post("/UserPage/Create/", creative).then(function (a) { console.log(a); }, function (a) { console.log(a);});
+        $http.post("/UserPage/Create/", $scope.creative, $scope.chapter).then(function () {});
     };
 
    

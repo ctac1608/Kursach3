@@ -8,7 +8,8 @@ namespace Kursach3
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery.rateyo.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -24,7 +25,8 @@ namespace Kursach3
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/userpage.css",
-                      "~/Content/jquery.rateyo.css"));
+                      "~/Content/jquery.rateyo.css",
+                      "~/Content/summernote.css"));
         }
     }
 }

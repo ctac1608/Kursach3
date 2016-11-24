@@ -1,11 +1,13 @@
 ﻿app.controller("popularCreativeController", function ($scope, creativeService) {
 
-    creativeServise.getPopularCreatives($scope);
+    creativeService.getPopularCreatives($scope);
 
 });
 
+
+
 app.controller("newCreativeController", function ($scope, creativeService) {
 
-    creativeServise.getNewCreatives($scope);
+    creativeService.getNewCreatives($scope);
 
 });
