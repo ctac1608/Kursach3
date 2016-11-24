@@ -50,7 +50,7 @@
 
                                         <div class="form-group row">
                                             <div class="col-xs-10">
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название главы">
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название главы" ng-model="chapter.Name">
                                             </div>
                                             
                                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -62,7 +62,7 @@
 
                                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                         <div class="panel-body">
-                                            <textarea class="form-control" id="Textarea" placeholder="Текст главы" rows="3"></textarea>
+                                            <div id="summernote"><p>Hello Summernote</p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
 
                         <br />
                     <div class="col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
-                        <button type="button" class="btn btn-default btn-lg" ng-click="createCreative()">Сохранить креатив</button>
+                        <button type="button" class="btn btn-default btn-lg" ng-click="createCreative();hideModal()">Сохранить креатив</button>
                     </div>
                     
                 </modal-dialog>
@@ -106,7 +106,6 @@
             <p>Rank</p>
         </div>
 
-        <p id="point">.</p>
     </div>
 
 
@@ -124,6 +123,8 @@
 <script src="~/Scripts/Directives/modalDialog.js"></script>
 <script src="~/Scripts/jquery.min.js"></script>
 <script src="~/Scripts/jquery.rateyo.min.js"></script>
+<script src="~/Scripts/summernote.js"></script>
+
 <script>
     $(function () {
 
@@ -133,6 +134,13 @@
 
     });
 </script>
+
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+</script>
+
 <script>
     $('body').on({ 'drop dragover dragenter': dropHandler }, '[data-image-uploader]');
     $('body').on({ 'change': regularImageUpload }, '#file');
@@ -205,7 +213,7 @@
 
         jQuery.ajax({
             type: "POST",
-            url: "/UserPage/ChangeAvatar",
+            url: "/UserPage/ChangeAvatar/",
             data: JSON.stringify({ src: src }),
             contentType: "application/json; charset=utf-8",
             dataType: "json"

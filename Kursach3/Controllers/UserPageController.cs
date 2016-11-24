@@ -1,4 +1,6 @@
-﻿using Kursach3.Models;
+﻿using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using Kursach3.Models;
 using Kursach3.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -31,19 +33,15 @@ namespace Kursach3.Controllers
         }
 
         [HttpPost]
-        public void Create(Creative creative)
+        public void Create(Creative creative, Chapter chapter)
         {
-            UserPageService.CreateCreative(creative, User.Identity.GetUserId());
-
+            UserPageService.CreateCreative(creative, chapter, User.Identity.GetUserId());
         }
 
         [HttpPost]
-        public void ChangeAvatar(byte[] src)
+        public void ChangeAvatar(string src)
         {
-            //string base64str = src.Substring(src.IndexOf(',') + 1);
-            //byte[] bytes = Convert.FromBase64String(base64str);
-            //File.WriteAllBytes("image.png", bytes);
+            UserPageService.ChangeAvatar(UserPageService.UploadAvatar(src), User.Identity.GetUserId());
         }
-
     }
 }

@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CloudinaryDotNet, Version=1.0.27.0, Culture=neutral, PublicKeyToken=c8234dc617ae7841, processorArchitecture=MSIL">
+      <HintPath>..\packages\CloudinaryDotNet.1.0.27\lib\net40\CloudinaryDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Duke.Owin.VkontakteMiddleware, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Duke.Owin.VkontakteMiddleware.1.2.0.0\lib\net45\Duke.Owin.VkontakteMiddleware.dll</HintPath>
       <Private>True</Private>
@@ -263,7 +267,51 @@
     <Content Include="Content\Images\user.png" />
     <Content Include="Content\Images\VkontakteNew.png" />
     <Content Include="Content\jquery.rateyo.css" />
+    <Content Include="Content\lang\summernote-ar-AR.js" />
+    <Content Include="Content\lang\summernote-bg-BG.js" />
+    <Content Include="Content\lang\summernote-ca-ES.js" />
+    <Content Include="Content\lang\summernote-cs-CZ.js" />
+    <Content Include="Content\lang\summernote-da-DK.js" />
+    <Content Include="Content\lang\summernote-de-DE.js" />
+    <Content Include="Content\lang\summernote-es-ES.js" />
+    <Content Include="Content\lang\summernote-es-EU.js" />
+    <Content Include="Content\lang\summernote-fa-IR.js" />
+    <Content Include="Content\lang\summernote-fi-FI.js" />
+    <Content Include="Content\lang\summernote-fr-FR.js" />
+    <Content Include="Content\lang\summernote-gl-ES.js" />
+    <Content Include="Content\lang\summernote-he-IL.js" />
+    <Content Include="Content\lang\summernote-hr-HR.js" />
+    <Content Include="Content\lang\summernote-hu-HU.js" />
+    <Content Include="Content\lang\summernote-id-ID.js" />
+    <Content Include="Content\lang\summernote-it-IT.js" />
+    <Content Include="Content\lang\summernote-ja-JP.js" />
+    <Content Include="Content\lang\summernote-ko-KR.js" />
+    <Content Include="Content\lang\summernote-lt-LT.js" />
+    <Content Include="Content\lang\summernote-lt-LV.js" />
+    <Content Include="Content\lang\summernote-nb-NO.js" />
+    <Content Include="Content\lang\summernote-nl-NL.js" />
+    <Content Include="Content\lang\summernote-pl-PL.js" />
+    <Content Include="Content\lang\summernote-pt-BR.js" />
+    <Content Include="Content\lang\summernote-pt-PT.js" />
+    <Content Include="Content\lang\summernote-ro-RO.js" />
+    <Content Include="Content\lang\summernote-ru-RU.js" />
+    <Content Include="Content\lang\summernote-sk-SK.js" />
+    <Content Include="Content\lang\summernote-sl-SI.js" />
+    <Content Include="Content\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="Content\lang\summernote-sr-RS.js" />
+    <Content Include="Content\lang\summernote-sv-SE.js" />
+    <Content Include="Content\lang\summernote-th-TH.js" />
+    <Content Include="Content\lang\summernote-tr-TR.js" />
+    <Content Include="Content\lang\summernote-uk-UA.js" />
+    <Content Include="Content\lang\summernote-vi-VN.js" />
+    <Content Include="Content\lang\summernote-zh-CN.js" />
+    <Content Include="Content\lang\summernote-zh-TW.js" />
+    <Content Include="Content\plugin\databasic\summernote-ext-databasic.css" />
+    <Content Include="Content\plugin\databasic\summernote-ext-databasic.js" />
+    <Content Include="Content\plugin\hello\summernote-ext-hello.js" />
+    <Content Include="Content\plugin\specialchars\summernote-ext-specialchars.js" />
     <Content Include="Content\search.css" />
+    <Content Include="Content\summernote.css" />
     <Content Include="Content\UserPage.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -280,8 +328,6 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -289,17 +335,30 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Controllers\addController.js" />
     <Content Include="Scripts\Controllers\creativeController.js" />
     <Content Include="Scripts\Controllers\userPageController.js" />
     <Content Include="Scripts\creating-script.js" />
     <Content Include="Scripts\Directives\modalDialog.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\font\summernote.eot" />
+    <Content Include="Content\font\summernote.ttf" />
+    <Content Include="Content\font\summernote.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-2.1.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.rateyo.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -311,6 +370,7 @@
     <Content Include="Scripts\Search.js" />
     <Content Include="Scripts\Services\creativeService.js" />
     <Content Include="Scripts\Services\userPageService.js" />
+    <Content Include="Scripts\summernote.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -354,10 +414,6 @@
     <Folder Include="Views\Creative\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>

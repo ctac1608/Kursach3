@@ -9,7 +9,7 @@ namespace Kursach3.Services
 {
     public class CreativeService
     {
-        private static int CountDisplayCreatives = 5;
+        private const int CountDisplayCreatives = 5;
 
         public static string GetPopularCreatives()
         {
@@ -35,9 +35,7 @@ namespace Kursach3.Services
 
         public static string GetFiveCreatives(IOrderedEnumerable<Creative> creatives)
         {
-            int i = 0;
-            var fiveCreatives = creatives.Skip(i).Take(CountDisplayCreatives);
-            i += CountDisplayCreatives;
+            var fiveCreatives = creatives.Take(CountDisplayCreatives);
             return JsonConvert.SerializeObject(fiveCreatives);
         }
 

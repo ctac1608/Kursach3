@@ -9,7 +9,6 @@ namespace Kursach3.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        //public ICollection<Tag> Tags { get; set; }
         public float Rank { get; set; }
         public int Count { get; set; }
         public DateTime CreateData { get; set; }
@@ -21,7 +20,6 @@ namespace Kursach3.Models
         public Creative(Creative creative, string userId)
         {
             Name = creative.Name;
-            //Tags = creative.Tags;
             Rank = 0;
             Count = 0;
             CreateData = DateTime.Now;
