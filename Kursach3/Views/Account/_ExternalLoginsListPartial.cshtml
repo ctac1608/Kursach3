@@ -19,8 +19,8 @@
             <div id="socialLoginList">
                 <p>
                     @foreach (AuthenticationDescription p in loginProviders) {
-                        string icon = p.AuthenticationType + ".png";
-                        <button type="submit" class="btn" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account"><img src="~/Content/Images/@icon" /></button>
+                        string social = p.AuthenticationType + "New.png";
+                        <button type="submit" class="btn" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account"><img src="~/Content/Images/@social" /></button>
                     }
                 </p>
             </div>

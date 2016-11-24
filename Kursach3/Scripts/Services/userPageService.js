@@ -3,7 +3,6 @@
     this.getUser = function (scope) {
         $http.get("/UserPage/GetUser/").then(function (response) {
             scope.user = response.data;
-            console.log(response);
         });
     };
 
@@ -14,13 +13,13 @@
         });
     };
 
-    this.createCreative = function (scope) {
-        var creative = {
-            Name: scope.Name
-        };
-        $http.post("/UserPage/CreateCreative/", creative, function () {
-        });
-    };
+    //this.createCreative = function (scope) {
+    //    var creative = {
+    //        Name: scope.Name
+    //    };
+    //    $http.post("/UserPage/CreateCreative/", creative, function () {
+    //    });
+    //};
 
 
 });

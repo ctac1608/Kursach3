@@ -206,7 +206,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CreativeController.cs" />
-    <Compile Include="Controllers\CreativesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserPageController.cs" />
@@ -216,6 +215,14 @@
     <Compile Include="Migrations\201611212258082_qqq.cs" />
     <Compile Include="Migrations\201611212258082_qqq.Designer.cs">
       <DependentUpon>201611212258082_qqq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611231104381_www.cs" />
+    <Compile Include="Migrations\201611231104381_www.Designer.cs">
+      <DependentUpon>201611231104381_www.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611241526033_eee.cs" />
+    <Compile Include="Migrations\201611241526033_eee.Designer.cs">
+      <DependentUpon>201611241526033_eee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -235,19 +242,26 @@
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.darkly.css" />
+    <Content Include="Content\bootstrap.darkly.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\creating-style.css" />
     <Content Include="Content\Images\add.png" />
     <Content Include="Content\Images\add24.png" />
     <Content Include="Content\Images\arrow.png" />
     <Content Include="Content\Images\close.png" />
-    <Content Include="Content\Images\Facebook.png" />
-    <Content Include="Content\Images\fotomoto.jpg" />
+    <Content Include="Content\Images\crown.png" />
+    <Content Include="Content\Images\FacebookNew.png" />
+    <Content Include="Content\Images\home.png" />
+    <Content Include="Content\Images\login.png" />
+    <Content Include="Content\Images\logout.png" />
     <Content Include="Content\Images\lupa.png" />
+    <Content Include="Content\Images\man-user.png" />
+    <Content Include="Content\Images\new-user.png" />
     <Content Include="Content\Images\pencil.png" />
-    <Content Include="Content\Images\Twitter.png" />
+    <Content Include="Content\Images\TwitterNew.png" />
     <Content Include="Content\Images\user.png" />
-    <Content Include="Content\Images\Vkontakte.png" />
+    <Content Include="Content\Images\VkontakteNew.png" />
     <Content Include="Content\jquery.rateyo.css" />
     <Content Include="Content\search.css" />
     <Content Include="Content\UserPage.css" />
@@ -275,23 +289,17 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controllers\addController.js" />
     <Content Include="Scripts\Controllers\creativeController.js" />
     <Content Include="Scripts\Controllers\userPageController.js" />
     <Content Include="Scripts\creating-script.js" />
     <Content Include="Scripts\Directives\modalDialog.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.1.1.js" />
-    <Content Include="Scripts\jquery-3.1.1.min.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.rateyo.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -315,7 +323,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -338,13 +345,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\SearchLine.cshtml" />
-    <Content Include="Views\Home\PersonalPage.cshtml" />
     <Content Include="Views\UserPage\Index.cshtml" />
-    <Content Include="Views\Creatives\Create.cshtml" />
-    <Content Include="Views\Creatives\Delete.cshtml" />
-    <Content Include="Views\Creatives\Details.cshtml" />
-    <Content Include="Views\Creatives\Edit.cshtml" />
-    <Content Include="Views\Creatives\Index.cshtml" />
+    <Content Include="Views\Home\AdminPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -358,11 +360,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611212258082_qqq.resx">
       <DependentUpon>201611212258082_qqq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611231104381_www.resx">
+      <DependentUpon>201611231104381_www.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611241526033_eee.resx">
+      <DependentUpon>201611241526033_eee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
