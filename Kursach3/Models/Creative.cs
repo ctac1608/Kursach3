@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kursach3.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,7 @@ namespace Kursach3.Models
 
         public Creative() { }
 
-        public Creative(Creative creative, string userId)
+        public Creative(CreativeView creative, string userId)
         {
             Name = creative.Name;
             Rank = 0;

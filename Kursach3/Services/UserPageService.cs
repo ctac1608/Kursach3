@@ -1,6 +1,7 @@
 ﻿using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Kursach3.Models;
+using Kursach3.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -55,16 +56,37 @@ namespace Kursach3.Services
             }
         }
 
-        public static void CreateCreative(Creative creative, Chapter chapter, string userId)
+        public static void CreateCreative(CreativeView creative, string userId)
         {
             Creative newCreative = new Creative(creative, userId);
-            Chapter newChapter = new Chapter(chapter, newCreative.Id);
 
             using (var db = new ApplicationDbContext())
             {
                 db.Creatives.Add(newCreative);
-                db.Chapters.Add(newChapter);
+                db.Users.Find(userId).CountCreatives++;
                 db.SaveChanges();
+            }
+
+            foreach (ChapterView chapter in creative.Chapters)
+            {
+                Chapter newChapter = new Chapter(chapter, newCreative.Id);
+
+                using (var db = new ApplicationDbContext())
+                {
+                    db.Chapters.Add(newChapter);
+                    db.SaveChanges();
+                }
+
+                foreach (Tag tag in chapter.Tags)
+                {
+                    Tag newTag = new Tag(tag, newChapter.Id);
+
+                    using (var db = new ApplicationDbContext())
+                    {
+                        db.Tags.Add(newTag);
+                        db.SaveChanges();
+                    }
+                }
             }
         }
     }

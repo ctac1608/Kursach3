@@ -1,7 +1,6 @@
-﻿using CloudinaryDotNet;
-using CloudinaryDotNet.Actions;
-using Kursach3.Models;
+﻿using Kursach3.Models;
 using Kursach3.Services;
+using Kursach3.ViewModels;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -33,9 +32,9 @@ namespace Kursach3.Controllers
         }
 
         [HttpPost]
-        public void Create(Creative creative, Chapter chapter)
+        public void Create(CreativeView creative)
         {
-            UserPageService.CreateCreative(creative, chapter, User.Identity.GetUserId());
+            UserPageService.CreateCreative(creative, User.Identity.GetUserId());
         }
 
         [HttpPost]

@@ -216,9 +216,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611241552244_a.cs" />
-    <Compile Include="Migrations\201611241552244_a.Designer.cs">
-      <DependentUpon>201611241552244_a.cs</DependentUpon>
+    <Compile Include="Migrations\201611250101273_qqq.cs" />
+    <Compile Include="Migrations\201611250101273_qqq.Designer.cs">
+      <DependentUpon>201611250101273_qqq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611250121134_www.cs" />
+    <Compile Include="Migrations\201611250121134_www.Designer.cs">
+      <DependentUpon>201611250121134_www.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -231,8 +235,8 @@
     <Compile Include="Services\CreativeService.cs" />
     <Compile Include="Services\UserPageService.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\ChapterViewModel.cs" />
-    <Compile Include="ViewModels\CreativeViewModel.cs" />
+    <Compile Include="ViewModels\ChapterView.cs" />
+    <Compile Include="ViewModels\CreativeView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -326,21 +330,18 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Controllers\addController.js" />
     <Content Include="Scripts\Controllers\creativeController.js" />
-    <Content Include="Scripts\Controllers\userPageController.js" />
+    <Content Include="Scripts\Controllers\userCreativesController.js" />
+    <Content Include="Scripts\Controllers\userDataController.js" />
     <Content Include="Scripts\creating-script.js" />
     <Content Include="Scripts\Directives\modalDialog.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\font\summernote.eot" />
     <Content Include="Content\font\summernote.ttf" />
     <Content Include="Content\font\summernote.woff" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-2.1.4-vsdoc.js" />
+    <Content Include="Scripts\Directives\tagInput.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery.min.js" />
@@ -352,13 +353,13 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Search.js" />
     <Content Include="Scripts\Services\creativeService.js" />
     <Content Include="Scripts\Services\userPageService.js" />
     <Content Include="Scripts\summernote.js" />
-    <Content Include="Scripts\tag-script.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -410,14 +411,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611212258082_qqq.resx">
-      <DependentUpon>201611212258082_qqq.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611250101273_qqq.resx">
+      <DependentUpon>201611250101273_qqq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611231104381_www.resx">
-      <DependentUpon>201611231104381_www.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611241526033_eee.resx">
-      <DependentUpon>201611241526033_eee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611250121134_www.resx">
+      <DependentUpon>201611250121134_www.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

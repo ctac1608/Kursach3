@@ -9,7 +9,7 @@ namespace Kursach3.Services
 {
     public class CreativeService
     {
-        private const int CountDisplayCreatives = 5;
+        private const int CountDisplayCreatives = 3;
 
         public static string GetPopularCreatives()
         {

@@ -11,6 +11,7 @@
             UserId: null
         };
         scope.creatives = [];
+
         $http.get("/Creative/GetPopularCreatives/").then(function (response) {
             scope.creatives = response.data;
         });

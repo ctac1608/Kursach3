@@ -50,36 +50,33 @@
 
                                         <div class="form-group row" style="margin-bottom: 0">
                                             <div class="col-xs-10">
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название главы" ng-model="chapter.Name">
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название главы" ng-model="ChapterView.Name">
                                             </div>
                                             
                                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                     <img src="~/Content/Images/arrow24.png" />
                                                 </a>
-                                            <a href="#"><img src="~/Content/Images/add24.png" style="margin-left:30px;"/></a>
+                                            <a href="#"><img src="~/Content/Images/add24.png" ng-click="addChapter()" style="margin-left:30px;"/></a>
                                         </div>
                                     </div>
 
                                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                         <div class="panel-body">
-                                            <div id="summernote"><p>Hello Summernote</p></div>
+                                            <div id="summernote"><p>Текст главы</p></div>
                                         </div>
-
-                                        
-                                        <!--добавление тегов-->
 
                                         <link href="~/Content/tag-style.css" rel="stylesheet" />
 
-                                        <div class="container" ng-app="tagSearch">
+                                        <div class="container">
                                             <div class="row">
                                                 <div>
-                                                    <div class="card" ng-controller="tagSearchController" ng-cloak>
+                                                    <div class="card" ng-cloak>
 
                                                         
                                                         <input class="form-control input-tags" data-tag-input="" data-ng-model="tagText" placeholder="Введите тег" data-ng-style="{width: inputWidth}" data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
 
                                                         <div class="tag badge" data-ng-repeat="(id, tag) in tags">
-                                                            {{ tag.name }}
+                                                            {{ tag.Name }}
                                                             <button class="tag-remove" data-ng-click="removeTag(id) ">&times;</button>
                                                         </div>
 
@@ -87,24 +84,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--конец тегов-->
+                                        
                                     </div>
                                 </div>
                             </div>
                     </div>
                     <br />
 
-                    <!--=====================================================================================-->
-
+                    
                     @*<div data-ng-repeat="(Id, chapter) in chapters">
                         {{chapter.Name}}
                     </div>*@
                     
 
-                    
-                    <!--=====================================================================================-->
-
-                    
 
                         <br />
                     <div class="col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
@@ -120,162 +112,149 @@
                 <button type="button" class="btn btn-default">Last edit</button>
                 <button type="button" class="btn btn-default">New</button>
             </div>
-        </div>  
-
-        <div class="creative">
-            <p id="name">Name</p>
-            <p class="date">Date</p>
-            <p class="date">Date</p>
-            <div id="rateYo"></div>
         </div>
 
-        <div class="creative">
-            <p id="name">Name</p>
-            <p class="date">Date</p>
-            <p class="date">Date</p>
-            <p>Rank</p>
-        </div>
+        <div ng-controller="userCreativesController">
+            <div ng-repeat="creative in creatives" class="creative well well-lg">
 
-        <div class="creative">
-            <p id="name">Name</p>
-            <p class="date">Date</p>
-            <p class="date">Date</p>
-            <p>Rank</p>
-        </div>
+                <p id="name">{{creative.Name}}</p>
+                <p class="date">{{creative.CreateData}}</p>
+                <p class="date">{{creative.RedactData}}</p>
+                <div id="rateYo"></div>
 
-    </div>
+
+            </div>
+        </div>
 
 
 </div>
 
+@section scripts {    
+    <script src="~/Scripts/creating-script.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/app.js"></script>
+    <script src="~/Scripts/Controllers/userDataController.js"></script>
+    <script src="~/Scripts/Controllers/userCreativesController.js"></script>
+    <script src="~/Scripts/Services/userPageService.js"></script>
+    <script src="~/Scripts/Controllers/addController.js"></script>
+    <script src="~/Scripts/Directives/modalDialog.js"></script>
+    <script src="~/Scripts/Directives/tagInput.js"></script>
+    <script src="~/Scripts/jquery.rateyo.min.js"></script>
+    <script src="~/Scripts/summernote.js"></script>
 
+    <script>
+        $(function () {
 
+            $("#rateYo").rateYo({
+                rating: 3.6
+            });
 
-<script src="~/Scripts/creating-script.js"></script>
-<script src="~/Scripts/angular.min.js"></script>
-<script src="~/Scripts/app.js"></script>
-<script src="~/Scripts/Controllers/userPageController.js"></script>
-<script src="~/Scripts/Services/userPageService.js"></script>
-<script src="~/Scripts/Controllers/addController.js"></script>
-<script src="~/Scripts/Directives/modalDialog.js"></script>
-<script src="~/Scripts/jquery.min.js"></script>
-<script src="~/Scripts/jquery.rateyo.min.js"></script>
-<script src="~/Scripts/summernote.js"></script>
-
-<script src="~/Scripts/tag-script.js"></script>
-<script>
-    $(function () {
-
-        $("#rateYo").rateYo({
-            rating: 3.6
         });
+    </script>
 
-    });
-</script>
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
+    </script>
 
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
-</script>
+    <script>
+        $('body').on({ 'drop dragover dragenter': dropHandler }, '[data-image-uploader]');
+        $('body').on({ 'change': regularImageUpload }, '#file');
 
-<script>
-    $('body').on({ 'drop dragover dragenter': dropHandler }, '[data-image-uploader]');
-    $('body').on({ 'change': regularImageUpload }, '#file');
-
-    function regularImageUpload(e) {
-        var file = $(this)[0],
-            type = file.files[0].type.toLocaleLowerCase();
-
-        if (type.match(/jpg/) !== null ||
-           type.match(/jpeg/) !== null ||
-           type.match(/png/) !== null ||
-           type.match(/gif/) !== null) {
-
-            readUploadedImage(file.files[0]);
-        }
-    }
-
-    function dropHandler(e) {
-        e.preventDefault();
-
-        if (e.type === 'drop' && e.originalEvent.dataTransfer && e.originalEvent.dataTransfer.files.length) {
-
-            var files = e.originalEvent.dataTransfer.files,
-				type = files[0].type.toLocaleLowerCase();
+        function regularImageUpload(e) {
+            var file = $(this)[0],
+                type = file.files[0].type.toLocaleLowerCase();
 
             if (type.match(/jpg/) !== null ||
-				type.match(/jpeg/) !== null ||
-				type.match(/png/) !== null ||
-				type.match(/gif/) !== null) {
+               type.match(/jpeg/) !== null ||
+               type.match(/png/) !== null ||
+               type.match(/gif/) !== null) {
 
-                readUploadedImage(files[0]);
+                readUploadedImage(file.files[0]);
+            }
+        }
 
+        function dropHandler(e) {
+            e.preventDefault();
+
+            if (e.type === 'drop' && e.originalEvent.dataTransfer && e.originalEvent.dataTransfer.files.length) {
+
+                var files = e.originalEvent.dataTransfer.files,
+				    type = files[0].type.toLocaleLowerCase();
+
+                if (type.match(/jpg/) !== null ||
+				    type.match(/jpeg/) !== null ||
+				    type.match(/png/) !== null ||
+				    type.match(/gif/) !== null) {
+
+                    readUploadedImage(files[0]);
+
+                }
+
+            }
+
+            return false;
+        }
+
+        function readUploadedImage(img) {
+            var reader;
+
+            if (window.FileReader) {
+                reader = new FileReader();
+                reader.readAsDataURL(img);
+
+                reader.onload = function (file) {
+                    if (file.target && file.target.result) {
+                        imageLoader(file.target.result, displayImage);
+                    }
+
+                };
+
+                reader.onerror = function () {
+                    throw new Error('Something went wrong!');
+                };
+
+            } else {
+                throw new Error('FileReader not supported!');
             }
 
         }
 
-        return false;
-    }
+        function imageLoader(src, callback) {
+            var img;
 
-    function readUploadedImage(img) {
-        var reader;
+            img = new Image();
 
-        if (window.FileReader) {
-            reader = new FileReader();
-            reader.readAsDataURL(img);
+            img.src = src;
 
-            reader.onload = function (file) {
-                if (file.target && file.target.result) {
-                    imageLoader(file.target.result, displayImage);
-                }
-
-            };
-
-            reader.onerror = function () {
-                throw new Error('Something went wrong!');
-            };
-
-        } else {
-            throw new Error('FileReader not supported!');
-        }
-
-    }
-
-    function imageLoader(src, callback) {
-        var img;
-
-        img = new Image();
-
-        img.src = src;
-
-        jQuery.ajax({
-            type: "POST",
-            url: "/UserPage/ChangeAvatar/",
-            data: JSON.stringify({ src: src }),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json"
-        });
+            jQuery.ajax({
+                type: "POST",
+                url: "/UserPage/ChangeAvatar/",
+                data: JSON.stringify({ src: src }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json"
+            });
         
-        img.onload = function () {
-            imageResizer(img, callback);
+            img.onload = function () {
+                imageResizer(img, callback);
+            }
+
         }
 
-    }
+        function imageResizer(img, callback) {
+            var canvas = document.createElement('canvas');
+            canvas.width = 200;
+            canvas.height = 200;
+            context = canvas.getContext('2d');
+            context.drawImage(img, 0, 0, 200, 200);
 
-    function imageResizer(img, callback) {
-        var canvas = document.createElement('canvas');
-        canvas.width = 200;
-        canvas.height = 200;
-        context = canvas.getContext('2d');
-        context.drawImage(img, 0, 0, 200, 200);
+            callback(canvas.toDataURL());
 
-        callback(canvas.toDataURL());
+        }
 
-    }
-
-    function displayImage(img) {
-        $('[data-image]').attr('src', img);
-    }
-</script>
-
+        function displayImage(img) {
+            $('[data-image]').attr('src', img);
+        }
+    </script>
+}

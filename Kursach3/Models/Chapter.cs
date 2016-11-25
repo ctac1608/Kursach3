@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kursach3.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,7 @@ namespace Kursach3.Models
 
         public Chapter() { }
 
-        public Chapter(Chapter chapter, int creativeId)
+        public Chapter(ChapterView chapter, int creativeId)
         {
             Name = chapter.Name;
             Text = chapter.Text;

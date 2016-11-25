@@ -8,18 +8,20 @@
 
     this.getUserCreatives = function (scope) {
         scope.creatives = [];
+        scope.creative = {
+            Id: null,
+            Name: null,
+            Rank: null,
+            Count: null,
+            CreateData: null,
+            RedactData: null,
+            UserId: null
+        };
+
         $http.get("/UserPage/GetUserCreatives/").then(function (response) {
             scope.creatives = response.data;
         });
     };
-
-    //this.createCreative = function (scope) {
-    //    var creative = {
-    //        Name: scope.Name
-    //    };
-    //    $http.post("/UserPage/CreateCreative/", creative, function () {
-    //    });
-    //};
 
 
 });

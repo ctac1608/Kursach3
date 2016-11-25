@@ -7,18 +7,24 @@
     <div ng-controller="popularCreativeController" class="popular well well-sm">
         <p2>Popular</p2>
         <div ng-repeat="creative in creatives" class="creative well well-lg">
-            <a href="#">{{creative.Name}}</a>
-            <!--<a href="#"><img src="~/Content/Images/Vkontakte.png"/>{{creative.UserId}}</a>-->
-            <a href="#">{{creative.Rank}}</a>
+
+            <p id="name">{{creative.Name}}</p>
+            <p class="date">{{creative.CreateData}}</p>
+            <p class="date">{{creative.RedactData}}</p>
+            <div id="rateYo"></div>
+
         </div>
     </div>
 
     <div ng-controller="newCreativeController" class="new well well-sm">
         <p2>New</p2>
         <div ng-repeat="creative in creatives" class="creative well well-lg">
-            <a href="#">{{creative.Name}}</a>
-            <!--<a href="#"><img src="~/Content/Images/Vkontakte.png"/>{{creative.UserId}}</a>-->
-            <a href="#">{{creative.Rank}}</a>
+            
+            <p id="name">{{creative.Name}}</p>
+            <p class="date">{{creative.CreateData}}</p>
+            <p class="date">{{creative.RedactData}}</p>
+            <div id="rateYo"></div>
+
         </div>
     </div>
         
