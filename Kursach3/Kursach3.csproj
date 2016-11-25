@@ -296,6 +296,7 @@
     <Content Include="Content\lang\summernote-vi-VN.js" />
     <Content Include="Content\lang\summernote-zh-CN.js" />
     <Content Include="Content\lang\summernote-zh-TW.js" />
+    <Content Include="Content\creative-reader-style.css" />
     <Content Include="Content\plugin\databasic\summernote-ext-databasic.css" />
     <Content Include="Content\plugin\databasic\summernote-ext-databasic.js" />
     <Content Include="Content\plugin\hello\summernote-ext-hello.js" />
@@ -396,11 +397,11 @@
     <Content Include="Views\Shared\SearchLine.cshtml" />
     <Content Include="Views\UserPage\Index.cshtml" />
     <Content Include="Views\Home\AdminPage.cshtml" />
+    <Content Include="Views\Creative\CreativeReader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Service References\" />
-    <Folder Include="Views\Creative\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

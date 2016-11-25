@@ -3,6 +3,10 @@
     $scope.toggleModal = function () {
         $scope.modalShown = !$scope.modalShown;
     };
+    $scope.modal2Shown = false;
+    $scope.toggle2Modal = function(){
+        $scope.modal2Shown = !$scope.modalShown;
+    };
     $scope.hideModal = function () {
         $scope.modalShown = false;
     };
