@@ -24,6 +24,7 @@ a.setting {
     height: 32px;
     float: left;
     position: relative;
+    background-image: url("../Content/Images/pencil.png");
 }
 
 #medal {
@@ -44,10 +45,7 @@ a.setting {
 .creative {
     height: 200px;
     width: 320px;
-    padding: 10px;
     margin-left: 20px;
-    border-radius: 6px;
-    background-color: white;
     float: left;
     position: relative;
 }

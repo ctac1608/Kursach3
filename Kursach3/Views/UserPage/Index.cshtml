@@ -12,7 +12,7 @@
             <div>
                 <div class="login">{{user.Login}}</div>
                 <a class="setting" href="/Manage/Index/">
-                    <img src="~/Content/Images/pencil.png" />
+                    @*<img src="~/Content/Images/pencil.png" />*@
                 </a>
             </div>
             <div id="medal">
@@ -115,18 +115,19 @@
         </div>
 
         <div ng-controller="userCreativesController">
-            <div ng-repeat="creative in creatives" class="creative well well-lg">
+            <div ng-repeat="creative in creatives" class="creative panel panel-default well well-lg">
 
-                <p id="name">{{creative.Name}}</p>
-                <p class="date">{{creative.CreateData}}</p>
-                <p class="date">{{creative.RedactData}}</p>
-                <div id="rateYo"></div>
-
+                <div class="panel-body">
+                    <p id="name">{{creative.Name}}</p>
+                    <p class="date">{{creative.CreateData}}</p>
+                    <p class="date">{{creative.RedactData}}</p>
+                    <div id="rateYo"></div>
+                </div>
 
             </div>
         </div>
 
-
+    </div>
 </div>
 
 @section scripts {    
