@@ -9,6 +9,11 @@ namespace Kursach3.Controllers
 {
     public class CreativeController : Controller
     {
+        public ActionResult CreativeReader()
+        {
+            return View();
+        }
+
         [HttpGet]
         public string GetPopularCreatives()
         {
