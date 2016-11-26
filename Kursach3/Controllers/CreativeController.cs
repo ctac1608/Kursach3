@@ -14,6 +14,11 @@ namespace Kursach3.Controllers
             return View();
         }
 
+        public ActionResult CreativeRedact()
+        {
+            return View();
+        }
+
         [HttpGet]
         public string GetPopularCreatives()
         {

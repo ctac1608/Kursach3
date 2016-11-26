@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "CreativeRedact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Content/creative-reader-style.css" rel="stylesheet" />
+
+<div ng-app="createApp">
+    <div class="main-div">
+        <div class="col-sm-3 col-md-3 col-xs-3 chapters-list">
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    Cras justo odio
+                </a>
+                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                <a href="#" class="list-group-item">Morbi leo risus</a>
+                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item">Vestibulum at eros</a>
+            </div>
+        </div>
+        <div class="col-sm-7 col-md-8 col-xs-8 full-creative jumbotron">
+            <form role="form">
+                <div class="form-group">
+                    <h2 class="style-for-h2">НАЗВАНИЕ КРЕАТИВА</h2>
+                    <hr />
+                    <input type="text" value="Название главы(вставить из базы)" class="form-control" />
+                    <hr />
+                    
+                        <div class="summernote">
+                            <p>
+                                текст главы сюда
+                            </p>
+                        </div>
+
+                    
+                    
+                    
+                    
+                    
+                    <div class="col-sm-offset-4 col-md-offset-5 col-xs-offset-4">
+                        <button type="submit" class="btn btn-default btn-lg">Сохранить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/summernote.js"></script>
+    <script>
+            $(document).ready(function() {
+                $('.summernote').summernote();
+            });
+    </script>
+}
