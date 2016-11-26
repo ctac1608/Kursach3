@@ -39,7 +39,7 @@ namespace Kursach3
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css",
+                      "~/Content/Site.css",
                       "~/Content/search.css",
                       "~/Content/creative-reader-style.css",
                       "~/Content/day-night-ru-en-style.css",

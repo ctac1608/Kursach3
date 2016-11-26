@@ -4,25 +4,35 @@
 
 <div ng-app="createApp">
         
-    <div ng-controller="popularCreativeController" class="popular well well-sm">
-        <p2>Popular</p2>
-        <div ng-repeat="creative in creatives" class="creative well well-lg">
-
-            <p id="name">{{creative.Name}}</p>
-            <p class="date">{{creative.CreateData}}</p>
-            <p class="date">{{creative.RedactData}}</p>
+    <h1 class="style-of-text-h1">Popular</h1>
+    
+    <div ng-controller="popularCreativeController" class="popular">
+        
+        <div ng-repeat="creative in creatives" class="creative-in-UserPage well">
+            <p id="name" class="style-for-name">{{creative.Name}}</p>
+            <hr />
+            <div id="link-for-name" class="position-link">
+                <a class="date">Имя чувака, чей это креатив</a>
+            </div>
+            <p class="date">Добавлен: {{creative.CreateData}}</p>
+            @*<p class="date">{{creative.RedactData}}</p>*@
             <div id="rateYo"></div>
-
         </div>
     </div>
-
-    <div ng-controller="newCreativeController" class="new well well-sm">
-        <p2>New</p2>
-        <div ng-repeat="creative in creatives" class="creative well well-lg">
+    <div style="clear:both"></div>
+    <h1 class="style-of-text-h1">New</h1>
+    
+    <div ng-controller="newCreativeController" class="new">
+        
+        <div ng-repeat="creative in creatives" class="creative-in-UserPage well well-lg">
             
-            <p id="name">{{creative.Name}}</p>
-            <p class="date">{{creative.CreateData}}</p>
-            <p class="date">{{creative.RedactData}}</p>
+            <p id="name" class="style-for-name">{{creative.Name}}</p>
+            <hr />
+            <div id="link-for-name" class="position-link">
+                <a class="date">Имя чувака, чей это креатив</a>
+            </div>
+            <p class="date">Добавлен: {{creative.CreateData}}</p>
+            @*<p class="date">{{creative.RedactData}}</p>*@
             <div id="rateYo"></div>
 
         </div>

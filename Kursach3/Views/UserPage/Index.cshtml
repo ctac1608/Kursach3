@@ -25,7 +25,7 @@
         <a id="email" href="mailto:{{user.Email}}">{{user.Email}}</a>
     </div>
 
-    <div class="creatives jumbotron">
+    <div class="creatives">
 
         <div id="creatives-header">
             <div id="add-dialog" ng-controller="addController">
@@ -122,14 +122,17 @@
 
         <div ng-controller="userCreativesController">
             <a ng-click="openCreative()" href="~/Creative/CreativeReader/" ng-repeat="creative in creatives">
-                <div class="creative panel panel-default well well-lg">
+                <div class="creative-in-UserPage well well-lg">
                 
-                    <div class="panel-body">
-                        <p id="name">{{creative.Name}}</p>
-                        <p class="date">{{creative.CreateData}}</p>
-                        <p class="date">{{creative.RedactData}}</p>
+                    
+                        <p id="name" class="style-for-name">{{creative.Name}}</p>
+                        <hr />
+                        <div id="link-for-name" class="position-link">
+                        </div>
+                        <p class="date size-of-text">Добавлен: {{creative.CreateData}}</p>
+                        <p class="date">Последнее редактирование: {{creative.RedactData}}</p>
                         <div id="rateYo"></div>
-                    </div>
+                    
              
                 </div>
             </a>
