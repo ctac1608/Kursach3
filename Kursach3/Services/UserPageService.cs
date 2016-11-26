@@ -49,7 +49,7 @@ namespace Kursach3.Services
         {
             using (var db = new ApplicationDbContext())
             {
-                var creatives = from c in db.Creatives.ToList()
+                var creatives = from c in db.Creatives.Where(x => x.UserId == userId).ToList()
                                 orderby c.Name descending
                                 select c;
                 return JsonConvert.SerializeObject(creatives);

@@ -30,7 +30,6 @@
         <div id="creatives-header">
             <div id="add-dialog" ng-controller="addController">
                 <img id="add" ng-click="toggleModal()" src="~/Content/Images/add.png" />
-                <img id="add" ng-click="toggle2Modal()" src="~/Content/Images/add.png" />
 
                 <modal-dialog show='modalShown' width='80%' height='90%' >
      
@@ -121,16 +120,18 @@
         </div>
 
         <div ng-controller="userCreativesController">
-            <div ng-repeat="creative in creatives" class="creative panel panel-default well well-lg">
-
-                <div class="panel-body">
-                    <p id="name">{{creative.Name}}</p>
-                    <p class="date">{{creative.CreateData}}</p>
-                    <p class="date">{{creative.RedactData}}</p>
-                    <div id="rateYo"></div>
+            <a ng-click="openCreative()" href="~/Creative/CreativeReader/" ng-repeat="creative in creatives">
+                <div class="creative panel panel-default well well-lg">
+                
+                    <div class="panel-body">
+                        <p id="name">{{creative.Name}}</p>
+                        <p class="date">{{creative.CreateData}}</p>
+                        <p class="date">{{creative.RedactData}}</p>
+                        <div id="rateYo"></div>
+                    </div>
+             
                 </div>
-
-            </div>
+            </a>
         </div>
 
     </div>
@@ -138,14 +139,6 @@
 
 @section scripts {    
     <script src="~/Scripts/creating-script.js"></script>
-    <script src="~/Scripts/angular.min.js"></script>
-    <script src="~/Scripts/app.js"></script>
-    <script src="~/Scripts/Controllers/userDataController.js"></script>
-    <script src="~/Scripts/Controllers/userCreativesController.js"></script>
-    <script src="~/Scripts/Services/userPageService.js"></script>
-    <script src="~/Scripts/Controllers/addController.js"></script>
-    <script src="~/Scripts/Directives/modalDialog.js"></script>
-    <script src="~/Scripts/Directives/tagInput.js"></script>
     <script src="~/Scripts/jquery.rateyo.min.js"></script>
     <script src="~/Scripts/summernote.js"></script>
 

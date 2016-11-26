@@ -6,96 +6,27 @@
 
 <link href="~/Content/creative-reader-style.css" rel="stylesheet" />
 
-<div class="main-div">
-    <div class="col-sm-3 col-md-3 col-xs-3 chapters-list">
-        <div class="list-group">
-            <a href="#" class="list-group-item">
-                Cras justo odio
-            </a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
+<div ng-app="createApp">
+    <div class="main-div" ng-controller="readController">
+        <div class="col-sm-3 col-md-3 col-xs-3 chapters-list">
+            <div class="list-group">
+
+                <a class="list-group-item" ng-repeat="chapter in creative.Chapters"  href="#{{chapter.Id}}"><h4>{{chapter.Name}}</h4></a>
+
+            </div>
         </div>
-    </div>
-    <div class="col-sm-7 col-md-8 col-xs-8 full-creative jumbotron">
-        <h1>НАЗВАНИЕ КРЕАТИВА</h1>
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
-        djv ysdbv d hsdbv  vjdhb vj hdb vh bkvdh vbd jvhbdfvhjbdf kvhbd fhdfb vhdfbvkdh bfkhdfb kdfhb kdfb flbkslv difsb kdfb vkdsf vkdfb vkdh vb
+        <div class="col-sm-7 col-md-8 col-xs-8 full-creative jumbotron">
+            <h1>{{creative.Name}}</h1>
+
+            <div ng-repeat="chapter in creative.Chapters">
+                <p id="{{chapter.Id}}"></p><br /><br /><br />
+                <h3>{{chapter.Name}}</h3>
+                @Html.Raw("{{chapter.Text}}")
+
+                <div class="tag" ng-repeat="tag in chapter.Tags">{{tag.Name}}</div>
+
+            </div>
+
+        </div>
     </div>
 </div>

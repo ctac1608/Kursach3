@@ -1,4 +1,5 @@
 ﻿using Kursach3.Models;
+using Kursach3.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,18 @@ namespace Kursach3.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpGet]
+        public string GetPopularCreatives()
+        {
+            return HomePageService.GetPopularCreatives();
+        }
+
+        [HttpGet]
+        public string GetNewCreatives()
+        {
+            return HomePageService.GetNewCreatives();
         }
 
         [HttpGet]

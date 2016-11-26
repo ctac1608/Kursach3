@@ -21,6 +21,22 @@ namespace Kursach3
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
+                      "~/Scripts/app.js",
+                      "~/Scripts/Controllers/popularCreativeController.js",
+                      "~/Scripts/Controllers/newCreativeController.js",
+                      "~/Scripts/Controllers/userDataController.js",
+                      "~/Scripts/Controllers/userCreativesController.js",
+                      "~/Scripts/Controllers/addController.js",
+                      "~/Scripts/Controllers/readController.js",
+                      "~/Scripts/Services/homePageService.js",
+                      "~/Scripts/Services/userPageService.js",
+                      "~/Scripts/Directives/modalDialog.js",
+                      "~/Scripts/Directives/tagInput.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
