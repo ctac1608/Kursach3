@@ -1,4 +1,5 @@
 ﻿using Kursach3.Models;
+using Kursach3.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,35 +10,20 @@ namespace Kursach3.Services
 {
     public class CreativeService
     {
-        private const int CountDisplayCreatives = 3;
-
-        public static string GetPopularCreatives()
+        public static string GetCreative()
         {
+            int ReadCreativeId = 37;
+
             using (var db = new ApplicationDbContext())
             {
-                var creatives = from c in db.Creatives.ToList()
-                                orderby c.Rank descending
-                                select c;
-                return GetFiveCreatives(creatives);
+                List<ChapterView> chapters = new List<ChapterView>();
+                foreach (Chapter chapter in db.Chapters.Where(n => n.CreativeId == ReadCreativeId).ToList())
+                {
+                    chapters.Add(new ChapterView(chapter, db.Tags.Where(n => n.ChapterId == chapter.Id).ToArray()));                    
+                }
+
+                return JsonConvert.SerializeObject(new CreativeView(db.Creatives.Find(ReadCreativeId), chapters.ToArray()));
             }
         }
-
-        public static string GetNewCreatives()
-        {
-            using (var db = new ApplicationDbContext())
-            {
-                var creatives = from c in db.Creatives.ToList()
-                                orderby c.CreateData descending
-                                select c;
-                return GetFiveCreatives(creatives);                
-            }
-        }
-
-        public static string GetFiveCreatives(IOrderedEnumerable<Creative> creatives)
-        {
-            var fiveCreatives = creatives.Take(CountDisplayCreatives);
-            return JsonConvert.SerializeObject(fiveCreatives);
-        }
-
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Kursach3.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,15 +21,10 @@ namespace Kursach3.Controllers
         }
 
         [HttpGet]
-        public string GetPopularCreatives()
+        public string GetCreative()
         {
-            return CreativeService.GetPopularCreatives();
+            return CreativeService.GetCreative();
         }
 
-        [HttpGet]
-        public string GetNewCreatives()
-        {
-            return CreativeService.GetNewCreatives();
-        }
     }
 }

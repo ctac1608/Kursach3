@@ -12,7 +12,7 @@
             <div>
                 <div class="login">{{user.Login}}</div>
                 <a class="setting" href="/Manage/Index/">
-                    <img src="~/Content/Images/pencil.png" />
+                    @*<img src="~/Content/Images/pencil.png" />*@
                 </a>
             </div>
             <div id="medal">
@@ -121,30 +121,25 @@
         </div>
 
         <div ng-controller="userCreativesController">
-            <div ng-repeat="creative in creatives" class="creative well well-lg">
-
-                <p id="name">{{creative.Name}}</p>
-                <p class="date">{{creative.CreateData}}</p>
-                <p class="date">{{creative.RedactData}}</p>
-                <div id="rateYo"></div>
-
-
-            </div>
+            <a ng-click="openCreative()" href="~/Creative/CreativeReader/" ng-repeat="creative in creatives">
+                <div class="creative panel panel-default well well-lg">
+                
+                    <div class="panel-body">
+                        <p id="name">{{creative.Name}}</p>
+                        <p class="date">{{creative.CreateData}}</p>
+                        <p class="date">{{creative.RedactData}}</p>
+                        <div id="rateYo"></div>
+                    </div>
+             
+                </div>
+            </a>
         </div>
 
-</div>
+    </div>
 </div>
 
 @section scripts {    
     <script src="~/Scripts/creating-script.js"></script>
-    <script src="~/Scripts/angular.min.js"></script>
-    <script src="~/Scripts/app.js"></script>
-    <script src="~/Scripts/Controllers/userDataController.js"></script>
-    <script src="~/Scripts/Controllers/userCreativesController.js"></script>
-    <script src="~/Scripts/Services/userPageService.js"></script>
-    <script src="~/Scripts/Controllers/addController.js"></script>
-    <script src="~/Scripts/Directives/modalDialog.js"></script>
-    <script src="~/Scripts/Directives/tagInput.js"></script>
     <script src="~/Scripts/jquery.rateyo.min.js"></script>
     <script src="~/Scripts/summernote.js"></script>
 

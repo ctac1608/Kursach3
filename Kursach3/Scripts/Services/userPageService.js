@@ -1,5 +1,5 @@
 ﻿app.service("userPageService", function ($http) {
-    
+
     this.getUser = function (scope) {
         $http.get("/UserPage/GetUser/").then(function (response) {
             scope.user = response.data;

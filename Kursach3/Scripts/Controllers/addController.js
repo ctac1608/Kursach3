@@ -3,7 +3,7 @@
     $scope.toggleModal = function () {
         $scope.modalShown = !$scope.modalShown;
     };
-
+    
     $scope.hideModal = function () {
         $scope.modalShown = false;
     };
@@ -31,6 +31,7 @@
             $scope.tags.push({
                 Name: this.tagText
             });
+
             $scope.Tags.push({
                 Name: this.tagText
             });
@@ -53,10 +54,12 @@
                 Text: $('#summernote').summernote('code'),
                 Tags: $scope.Tags
             });
+
             $scope.ChapterView = {
                 Name: null,
                 Text: null
             };
+
             $scope.tags = [];
             $scope.Tags = [];
         }
@@ -67,14 +70,15 @@
             Name: $scope.creative.Name,
             Chapters: $scope.Chapters
         };
-        console.log($scope.creative);
-        $http.post("/UserPage/Create/", $scope.creative).then(function () { });
+
+        $http.post("/UserPage/Create/", $scope.creative).then(function () {
+        });
+
         $scope.Chapters = [];
         $scope.creative = {
             Name: '',
             Chapters: []
         };
     };
-
    
 });

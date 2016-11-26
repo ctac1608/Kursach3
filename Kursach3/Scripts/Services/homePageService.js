@@ -1,6 +1,7 @@
-﻿app.service("creativeService", function ($http) {
+﻿app.service("homePageService", function ($http) {
 
     this.getPopularCreatives = function (scope) {
+        scope.creatives = [];
         scope.creative = {
             Id: null,
             Name: null,
@@ -10,16 +11,24 @@
             RedactData: null,
             UserId: null
         };
-        scope.creatives = [];
 
-        $http.get("/Creative/GetPopularCreatives/").then(function (response) {
+        $http.get("/Home/GetPopularCreatives/").then(function (response) {
             scope.creatives = response.data;
         });
     };
 
     this.getNewCreatives = function (scope) {
         scope.creatives = [];
-        $http.get("/Creative/GetNewCreatives/").then(function (response) {
+        scope.creative = {
+            Id: null,
+            Name: null,
+            Rank: null,
+            Count: null,
+            CreateData: null,
+            RedactData: null,
+            UserId: null
+        };
+        $http.get("/Home/GetNewCreatives/").then(function (response) {
             scope.creatives = response.data;
         });
     };
