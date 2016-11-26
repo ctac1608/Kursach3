@@ -42,3 +42,6 @@ textarea {
     font-family:'Times New Roman', Times, serif;
     font-size: 22pt;
 }
+.between-cloud-and-panel{
+    clear:both;
+}

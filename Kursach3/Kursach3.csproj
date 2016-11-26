@@ -318,6 +318,7 @@
     <Content Include="Content\plugin\specialchars\summernote-ext-specialchars.js" />
     <Content Include="Content\search.css" />
     <Content Include="Content\summernote.css" />
+    <Content Include="Content\tag-cloud.css" />
     <Content Include="Content\tag-style.css" />
     <Content Include="Content\UserPage.css" />
     <Content Include="favicon.ico" />
@@ -378,6 +379,7 @@
     <Content Include="Scripts\Services\homePageService.js" />
     <Content Include="Scripts\Services\userPageService.js" />
     <Content Include="Scripts\summernote.js" />
+    <Content Include="Scripts\Tag-Cloud.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

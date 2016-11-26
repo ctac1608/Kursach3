@@ -45,6 +45,7 @@ namespace Kursach3
                       "~/Content/day-night-ru-en-style.css",
                       "~/Content/tag-style.css",
                       "~/Content/creating-style.css",
+                      "~/Content/tag-cloud.css",
                       "~/Content/userpage.css",
                       "~/Content/jquery.rateyo.css",
                       "~/Content/summernote.css"));
