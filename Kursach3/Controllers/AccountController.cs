@@ -150,7 +150,7 @@ namespace Kursach3.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Login, Email = model.Email, Login = model.Login, AvatarUrl = "/Content/Images/user.png" };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Login = model.Login, AvatarUrl = "/Content/Images/user.png" };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 //await UserManager.AddToRoleAsync(user.Id, "user");
                 if (result.Succeeded)

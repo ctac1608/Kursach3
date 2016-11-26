@@ -112,10 +112,10 @@
     content:'';
 }
 .search-wrapper .input-holder .search-icon span::before {
-    background-image: url(Images/lupa.png);
+    background-image: url(Images/Day/lupa.png);
 }
 .search-wrapper .input-holder .search-icon span::after {
-   background-image: url(Images/lupa.png); 
+   background-image: url(Images/Day/lupa.png); 
 }
 
 .search-wrapper .close {
