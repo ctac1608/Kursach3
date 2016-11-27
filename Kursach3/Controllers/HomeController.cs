@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace Kursach3.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : DefaultController
     {
         public ActionResult Index()
         {

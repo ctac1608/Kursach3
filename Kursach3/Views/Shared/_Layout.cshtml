@@ -65,6 +65,8 @@
             </fieldset>
         </form>
 
+        @using (Html.BeginForm("ChangeCulture", "Default"))
+        {
         <label class="toggleSwitch xlarge" onclick="">
             <input type="checkbox" />
             <span>
@@ -73,6 +75,7 @@
             </span>
             <a></a>
         </label>
+        }
     </div>
 
     @Scripts.Render("~/bundles/jquery")

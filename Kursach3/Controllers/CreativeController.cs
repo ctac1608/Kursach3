@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace Kursach3.Controllers
 {
-    public class CreativeController : Controller
+    public class CreativeController : DefaultController
     {
         public ActionResult CreativeReader()
         {

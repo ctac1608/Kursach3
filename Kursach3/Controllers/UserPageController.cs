@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace Kursach3.Controllers
 {
-    public class UserPageController : Controller
+    public class UserPageController : DefaultController
     {
 
         public ActionResult Index()

@@ -11,7 +11,7 @@ using Kursach3.Models;
 namespace Kursach3.Controllers
 {
     [Authorize]
-    public class ManageController : Controller
+    public class ManageController : DefaultController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
