@@ -120,8 +120,11 @@ a.setting {
     width:50%;
 }
 
-/*h1, p{
-    color: #009871;
+.label-position-in-modal-dialog{
+    margin-top: 7px;
+    padding-right: -15px;
+    max-width: 60px;
 }
-========цвет текста в темной теме===========
-*/
+.position-tags-in-UserPage{
+    margin-top: 10px;
+}

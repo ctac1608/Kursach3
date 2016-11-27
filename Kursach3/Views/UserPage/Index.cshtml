@@ -35,8 +35,10 @@
                     <div class="thismargin">
                         
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-xs-2 col-form-label">@Resources.Resource.Name:</label>
-                            <div class="col-xs-10">
+                            
+                                <label for="example-text-input" class="col-xs-2 col-form-label label-position-in-modal-dialog">@Resources.Resource.Name:</label>
+                            
+                                <div class="col-xs-10">
                                 <input class="form-control" type="text" placeholder=@Resources.Resource.CreativeName id="example-text-input" ng-model="creative.Name">
                             </div>
                         </div>
@@ -74,11 +76,12 @@
 
                                                             <div class="input-tags">
                                                             <input class="form-control" data-tag-input="" data-ng-model="tagText" placeholder=@Resources.Resource.EnterATag data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
-                                                                
-                                                            <div class="tag badge" data-ng-repeat="(id, tag) in tags">
-                                                                {{ tag.Name }}
-                                                                <button class="tag-remove" data-ng-click="removeTag(id) ">&times;</button>
-                                                            </div>
+                                                                <div class="position-tags-in-UserPage">
+                                                                    <div class="tag badge" data-ng-repeat="(id, tag) in tags">
+                                                                        {{ tag.Name }}
+                                                                        <button class="tag-remove" data-ng-click="removeTag(id) ">&times;</button>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -97,8 +100,8 @@
                         {{chapter.Name}}
                     </div>*@
                         <br />
-                    <div class="col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
-                        <button type="button" class="btn btn-default btn-lg" ng-click="createCreative();hideModal()">@Resources.Resource.SaveCreative</button>
+                    <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
+                        <button type="button" class="btn btn-default btn-lg col-md-5" ng-click="createCreative();hideModal()">@Resources.Resource.SaveCreative</button>
                     </div>                 
                 </modal-dialog>
             </div>
