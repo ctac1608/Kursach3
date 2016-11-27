@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
 }
 
-<div ng-app="createApp">
+<div>
     
     <div class="user-data jumbotron" ng-controller="userDataController">
         <div class="avatar">
@@ -11,9 +11,7 @@
         <div>
             <div>
                 <div class="login">{{user.Login}}</div>
-                <a class="setting" href="/Manage/Index/">
-                    @*<img src="~/Content/Images/pencil.png" />*@
-                </a>
+                <a class="setting" href="/Manage/Index/"></a>
             </div>
             <div id="medal">
                 <img class="medal" src="http://s1.iconbird.com/ico/1112/Onebit4/w48h481351852735010.png" />
@@ -29,7 +27,7 @@
 
         <div id="creatives-header">
             <div id="add-dialog" ng-controller="addController">
-                <img id="add" ng-click="toggleModal()" src="~/Content/Images/add.png" />
+                <img id="add" ng-click="toggleModal()" src="~/Content/Images/Day/add.png" />
 
                 <modal-dialog show='modalShown' width='80%' height='90%' >
      
@@ -55,9 +53,9 @@
                                             </div>
                                             
                                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                    <img src="~/Content/Images/arrow24.png" />
+                                                    <img src="~/Content/Images/Day/arrow24.png" />
                                                 </a>
-                                            <a href="#"><img src="~/Content/Images/add24.png" ng-click="addChapter()" style="margin-left:30px;"/></a>
+                                            <a href="#"><img src="~/Content/Images/Day/add24.png" ng-click="addChapter()" style="margin-left:30px;"/></a>
                                         </div>
                                     </div>
 
@@ -113,7 +111,7 @@
         </div>
 
         <div ng-controller="userCreativesController">
-            <a ng-click="openCreative()" href="~/Creative/CreativeReader/" ng-repeat="creative in creatives">
+            <div ng-click="openCreative()" ng-repeat="creative in creatives">
                 <div class="creative-in-UserPage well well-lg">
                 
                     
@@ -127,7 +125,7 @@
                     
              
                 </div>
-            </a>
+            </div>
         </div>
 
     </div>

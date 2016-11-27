@@ -10,19 +10,17 @@ namespace Kursach3.Services
 {
     public class CreativeService
     {
-        public static string GetCreative()
+        public static string GetCreative(int creativeId)
         {
-            int ReadCreativeId = 37;
-
             using (var db = new ApplicationDbContext())
             {
                 List<ChapterView> chapters = new List<ChapterView>();
-                foreach (Chapter chapter in db.Chapters.Where(n => n.CreativeId == ReadCreativeId).ToList())
+                foreach (Chapter chapter in db.Chapters.Where(n => n.CreativeId == creativeId).ToList())
                 {
                     chapters.Add(new ChapterView(chapter, db.Tags.Where(n => n.ChapterId == chapter.Id).ToArray()));                    
                 }
 
-                return JsonConvert.SerializeObject(new CreativeView(db.Creatives.Find(ReadCreativeId), chapters.ToArray()));
+                return JsonConvert.SerializeObject(new CreativeView(db.Creatives.Find(creativeId), chapters.ToArray()));
             }
         }
     }

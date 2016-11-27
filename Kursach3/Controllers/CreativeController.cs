@@ -1,5 +1,7 @@
-﻿using Kursach3.Filters;
+﻿using Kursach3.Models;
+using Kursach3.Filters;
 using Kursach3.Services;
+using Kursach3.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -22,10 +24,10 @@ namespace Kursach3.Controllers
             return View();
         }
 
-        [HttpGet]
-        public string GetCreative()
+        [HttpPost]
+        public string GetCreative(CreativeView creative)
         {
-            return CreativeService.GetCreative();
+            return CreativeService.GetCreative(creative.Id);
         }
 
     }

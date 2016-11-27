@@ -1,6 +1,7 @@
 ﻿using Kursach3.Filters;
 using Kursach3.Models;
 using Kursach3.Services;
+using MvcLuceneSampleApp.Search;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace Kursach3.Controllers
     {
         public ActionResult Index()
         {
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                LuceneSearch.ClearLuceneIndex();
+                LuceneSearch.AddUpdateLuceneIndex(db.Creatives);
+            }
             return View();
         }
 
@@ -55,6 +61,12 @@ namespace Kursach3.Controllers
                 db.SaveChanges();
             }
             return RedirectToAction("AdminPage");
+        }
+
+        [HttpPost]
+        public void SearchResult(string searchRow)
+        {
+            IEnumerable <object> creative  = LuceneSearch.Search(searchRow);
         }
 
 
