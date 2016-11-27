@@ -15,6 +15,7 @@
 
             if (attrs.height) {
                 scope.dialogStyle.height = attrs.height;
+                
             }
 
             scope.hideModal = function () {

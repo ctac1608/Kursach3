@@ -342,6 +342,7 @@
     <Content Include="Content\tag-cloud.css" />
     <Content Include="Content\tag-style.css" />
     <Content Include="Content\UserPage.css" />
+    <Content Include="Content\UserPage.dark.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
