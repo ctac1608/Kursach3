@@ -112,10 +112,8 @@
         </div>
 
         <div ng-controller="userCreativesController">
-            <div ng-click="openCreative()" ng-repeat="creative in creatives">
-                <div class="creative-in-UserPage well well-lg">
-                
-                    
+            <div ng-click="openCreative()" class="col-md-4 col-sm-6 col-xs-12" ng-repeat="creative in creatives">
+                <div class="creative-in-UserPage well">
                         <p id="name" class="style-for-name">{{creative.Name}}</p>
                         <hr />
                         <div id="link-for-name" class="position-link">
@@ -123,8 +121,6 @@
                         <p class="date size-of-text">@Resources.Resource.Added: {{creative.CreateData}}</p>
                         <p class="date">@Resources.Resource.LastRedact: {{creative.RedactData}}</p>
                         <div id="rateYo"></div>
-                    
-             
                 </div>
             </div>
         </div>

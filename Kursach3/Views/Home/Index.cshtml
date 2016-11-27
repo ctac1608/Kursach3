@@ -2,39 +2,44 @@
     ViewBag.Title = "Home Page";
 }
 
-<div>
+<div class="vertical-indent">
 
     <h1 class="style-of-text-h1">@Resources.Resource.Popular</h1>
 
     <div ng-controller="popularCreativeController" class="popular">
 
-        <div ng-repeat="creative in creatives" class="creative-in-UserPage well">
-            <p id="name" class="style-for-name">{{creative.Name}}</p>
-            <hr />
-            <div id="link-for-name" class="position-link">
-                <a class="date">Имя чувака, чей это креатив</a>
+        
+        <div ng-repeat="creative in creatives" class="col-md-4 col-sm-6 col-xs-12">
+            <div class="well creative-in-UserPage">
+                <p id="name" class="style-for-name">{{creative.Name}}</p>
+                <hr />
+                <div id="link-for-name" class="position-link">
+                    <a class="date">Имя чувака, чей это креатив</a>
+                </div>
+                <p class="date">@Resources.Resource.Added: {{creative.CreateData}}</p>
+                @*<p class="date">{{creative.RedactData}}</p>*@
+                <div id="rateYo"></div>
             </div>
-            <p class="date">@Resources.Resource.Added: {{creative.CreateData}}</p>
-            @*<p class="date">{{creative.RedactData}}</p>*@
-            <div id="rateYo"></div>
         </div>
+        
     </div>
     <div style="clear:both"></div>
     <h1 class="style-of-text-h1">@Resources.Resource.NEW_</h1>
 
     <div ng-controller="newCreativeController" class="new">
 
-        <div ng-repeat="creative in creatives" class="creative-in-UserPage well well-lg">
+        <div ng-repeat="creative in creatives" class="col-md-4 col-sm-6 col-xs-12">
+            <div class="well">
 
-            <p id="name" class="style-for-name">{{creative.Name}}</p>
-            <hr />
-            <div id="link-for-name" class="position-link">
-                <a class="date">Имя чувака, чей это креатив</a>
+                <p id="name" class="style-for-name">{{creative.Name}}</p>
+                <hr />
+                <div id="link-for-name" class="position-link">
+                    <a class="date">Имя чувака, чей это креатив</a>
+                </div>
+                <p class="date">@Resources.Resource.Added: {{creative.CreateData}}</p>
+                @*<p class="date">{{creative.RedactData}}</p>*@
+                <div id="rateYo"></div>
             </div>
-            <p class="date">@Resources.Resource.Added: {{creative.CreateData}}</p>
-            @*<p class="date">{{creative.RedactData}}</p>*@
-            <div id="rateYo"></div>
-
         </div>
     </div>
     <div class="between-cloud-and-panel"></div>
