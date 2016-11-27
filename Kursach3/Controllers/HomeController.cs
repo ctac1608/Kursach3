@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace Kursach3.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : DefaultController
     {
         public ActionResult Index()
         {
@@ -42,6 +42,10 @@ namespace Kursach3.Controllers
                 var users = db.Users.ToList();
                 return View(users);
             }
+        }
+        public ActionResult SearchPage()
+        {
+            return View();
         }
 
         [HttpGet]

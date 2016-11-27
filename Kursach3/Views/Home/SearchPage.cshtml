@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "SearchPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div ng-app="createApp">
+    
+       @*заменить репит и контроллер на то, что понадобится в поиске*@
+    <div ng-controller="popularCreativeController" class="popular">
+        <div ng-repeat="creative in creatives" class="creative-in-SearchPage well">
+            <p id="name" class="style-for-name">{{creative.Name}}</p>
+            <hr />
+            <div id="link-for-name" class="position-link">
+                <a class="date">Имя чувака, чей это креатив</a>
+            </div>
+            <p class="date">Добавлен: {{creative.CreateData}}</p>
+            @*<p class="date">{{creative.RedactData}}</p>*@
+            <div id="rateYo"></div>
+        </div>
+    </div>
+ </div>

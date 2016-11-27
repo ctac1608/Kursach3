@@ -2,31 +2,69 @@
     ViewBag.Title = "Home Page";
 }
 
-<div>
-        
-    <div ng-controller="popularCreativeController" class="popular well well-sm">
-        <p2>Popular</p2>
-        <div ng-repeat="creative in creatives" class="creative well well-lg">
+<div ng-app="createApp">
 
-            <p id="name">{{creative.Name}}</p>
-            <p class="date">{{creative.CreateData}}</p>
-            <p class="date">{{creative.RedactData}}</p>
+    <h1 class="style-of-text-h1">Popular</h1>
+
+    <div ng-controller="popularCreativeController" class="popular">
+
+        <div ng-repeat="creative in creatives" class="creative-in-UserPage well">
+            <p id="name" class="style-for-name">{{creative.Name}}</p>
+            <hr />
+            <div id="link-for-name" class="position-link">
+                <a class="date">Имя чувака, чей это креатив</a>
+            </div>
+            <p class="date">Добавлен: {{creative.CreateData}}</p>
+            @*<p class="date">{{creative.RedactData}}</p>*@
+            <div id="rateYo"></div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <h1 class="style-of-text-h1">New</h1>
+
+    <div ng-controller="newCreativeController" class="new">
+
+        <div ng-repeat="creative in creatives" class="creative-in-UserPage well well-lg">
+
+            <p id="name" class="style-for-name">{{creative.Name}}</p>
+            <hr />
+            <div id="link-for-name" class="position-link">
+                <a class="date">Имя чувака, чей это креатив</a>
+            </div>
+            <p class="date">Добавлен: {{creative.CreateData}}</p>
+            @*<p class="date">{{creative.RedactData}}</p>*@
             <div id="rateYo"></div>
 
         </div>
     </div>
-
-    <div ng-controller="newCreativeController" class="new well well-sm">
-        <p2>New</p2>
-        <div ng-repeat="creative in creatives" class="creative well well-lg">
-            
-            <p id="name">{{creative.Name}}</p>
-            <p class="date">{{creative.CreateData}}</p>
-            <p class="date">{{creative.RedactData}}</p>
-            <div id="rateYo"></div>
-
+    <div class="between-cloud-and-panel"></div>
+    <div style="position:relative">
+        <div id="div1">
+            <a href="http://codepen.io/fatihbs">JS</a>
+            <a href="http://codepen.io/fatihbs">CSS3</a>
+            <a href="http://codepen.io/fatihbs">HTML5</a>
+            <a href="http://codepen.io/fatihbs">DIV</a>
+            <a href="http://codepen.io/fatihbs">style</a>
+            <a href="http://codepen.io/fatihbs">SEO</a>
+            <a href="http://codepen.io/fatihbs">3D</a>
+            <a href="http://codepen.io/fatihbs">JavaScript</a>
+            <a href="http://codepen.io/fatihbs">-.-</a>
+            <a href="http://codepen.io/fatihbs">CSS</a>
+            <a href="http://codepen.io/fatihbs">*_*</a>
+            <a href="http://codepen.io/fatihbs">0_0</a>
+            <a href="http://codepen.io/fatihbs">Class</a>
+            <a href="http://codepen.io/fatihbs">IMG</a>
+            <a href="http://codepen.io/fatihbs">OOP</a>
+            <a href="http://codepen.io/fatihbs">XHTML</a>
+            <a href="http://codepen.io/fatihbs">setInterval</a>
+            <a href="http://codepen.io/fatihbs">W3C</a>
+            <a href="http://codepen.io/fatihbs">google</a>
+            <a href="http://codepen.io/fatihbs">apple</a>
+            <a href="http://codepen.io/fatihbs">blue</a>
         </div>
     </div>
-        
 </div>
 
+@section scripts{
+    <script src="~/Scripts/Tag-Cloud.js"></script>
+}

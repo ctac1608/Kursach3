@@ -44,12 +44,13 @@ namespace Kursach3
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css",
+                      "~/Content/Site.css",
                       "~/Content/search.css",
                       "~/Content/creative-reader-style.css",
                       "~/Content/day-night-ru-en-style.css",
                       "~/Content/tag-style.css",
                       "~/Content/creating-style.css",
+                      "~/Content/tag-cloud.css",
                       "~/Content/userpage.css",
                       "~/Content/jquery.rateyo.css",
                       "~/Content/summernote.css"));
