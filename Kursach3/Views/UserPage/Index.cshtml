@@ -66,25 +66,26 @@
                                         </div>
 
                                         
+                                        <div class="width-of-tag-container">
+                                            
+                                                <div class="row">
+                                                    <div>
+                                                        <div class="card" ng-cloak>
 
-                                        <div class="container">
-                                            <div class="row">
-                                                <div>
-                                                    <div class="card" ng-cloak>
-
-                                                        
-                                                        <input class="form-control input-tags" data-tag-input="" data-ng-model="tagText" placeholder=@Resources.Resource.EnterATag data-ng-style="{width: inputWidth}" data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
-
-                                                        <div class="tag badge" data-ng-repeat="(id, tag) in tags">
-                                                            {{ tag.Name }}
-                                                            <button class="tag-remove" data-ng-click="removeTag(id) ">&times;</button>
+                                                            <div class="input-tags">
+                                                            <input class="form-control" data-tag-input="" data-ng-model="tagText" placeholder=@Resources.Resource.EnterATag data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
+                                                                
+                                                            <div class="tag badge" data-ng-repeat="(id, tag) in tags">
+                                                                {{ tag.Name }}
+                                                                <button class="tag-remove" data-ng-click="removeTag(id) ">&times;</button>
+                                                            </div>
+                                                            </div>
                                                         </div>
-
                                                     </div>
+
                                                 </div>
-                                            </div>
-                                        </div>
-                                        
+                                            
+                                        </div>  
                                     </div>
                                 </div>
                             </div>

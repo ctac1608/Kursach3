@@ -79,6 +79,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There are no two-factor authentication providers configured. See this article for details on setting up this ASP.NET application to support two-factor..
+        /// </summary>
+        public static string ALotOfText3 {
+            get {
+                return ResourceManager.GetString("ALotOfText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Associate your account.
         /// </summary>
         public static string AssociateYour {
@@ -115,6 +124,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Authentication.
+        /// </summary>
+        public static string Authentication {
+            get {
+                return ResourceManager.GetString("Authentication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A-Z.
         /// </summary>
         public static string AZ {
@@ -138,6 +156,24 @@ namespace Resources {
         public static string Changed {
             get {
                 return ResourceManager.GetString("Changed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change your account settings.
+        /// </summary>
+        public static string ChangeYourAccountSettings {
+            get {
+                return ResourceManager.GetString("ChangeYourAccountSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change your password.
+        /// </summary>
+        public static string ChangeYourPassword {
+            get {
+                return ResourceManager.GetString("ChangeYourPassword", resourceCulture);
             }
         }
         
@@ -196,11 +232,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter tegs.
+        ///   Looks up a localized string similar to Tags.
         /// </summary>
         public static string EnterATag {
             get {
                 return ResourceManager.GetString("EnterATag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ExternalLogins.
+        /// </summary>
+        public static string ExternalLogins {
+            get {
+                return ResourceManager.GetString("ExternalLogins", resourceCulture);
             }
         }
         
@@ -237,6 +282,15 @@ namespace Resources {
         public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage..
+        /// </summary>
+        public static string Manage {
+            get {
+                return ResourceManager.GetString("Manage", resourceCulture);
             }
         }
         
@@ -318,6 +372,15 @@ namespace Resources {
         public static string SaveCreative {
             get {
                 return ResourceManager.GetString("SaveCreative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two-Factor.
+        /// </summary>
+        public static string TwoFactor {
+            get {
+                return ResourceManager.GetString("TwoFactor", resourceCulture);
             }
         }
         
