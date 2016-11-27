@@ -430,6 +430,7 @@
     <Content Include="Views\Home\AdminPage.cshtml" />
     <Content Include="Views\Creative\CreativeReader.cshtml" />
     <Content Include="Views\Creative\CreativeRedact.cshtml" />
+    <Content Include="Views\Home\SearchPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

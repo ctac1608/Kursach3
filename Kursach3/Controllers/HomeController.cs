@@ -37,6 +37,10 @@ namespace Kursach3.Controllers
                 return View(users);
             }
         }
+        public ActionResult SearchPage()
+        {
+            return View();
+        }
 
         [HttpGet]
         [Authorize]
