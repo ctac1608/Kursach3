@@ -374,6 +374,7 @@
     <Content Include="Scripts\Controllers\readController.js" />
     <Content Include="Scripts\Controllers\redactController.js" />
     <Content Include="Scripts\Controllers\searchController.js" />
+    <Content Include="Scripts\Controllers\searchPageController.js" />
     <Content Include="Scripts\Controllers\userCreativesController.js" />
     <Content Include="Scripts\Controllers\userDataController.js" />
     <Content Include="Scripts\creating-script.js" />

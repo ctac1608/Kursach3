@@ -36,6 +36,7 @@ namespace Kursach3
                       "~/Scripts/Controllers/userCreativesController.js",
                       "~/Scripts/Controllers/addController.js",
                       "~/Scripts/Controllers/readController.js",
+                      "~/Scripts/Controllers/searchPageController.js",
                       "~/Scripts/Services/homePageService.js",
                       "~/Scripts/Services/userPageService.js",
                       "~/Scripts/Directives/modalDialog.js",
@@ -43,7 +44,7 @@ namespace Kursach3
                       "~/Scripts/Configs/readConfig.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.darkly.css",
                       "~/Content/Site.css",
                       "~/Content/search.css",
                       "~/Content/creative-reader-style.css",

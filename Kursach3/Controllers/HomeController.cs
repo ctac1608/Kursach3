@@ -43,6 +43,7 @@ namespace Kursach3.Controllers
                 return View(users);
             }
         }
+
         public ActionResult SearchPage()
         {
             return View();
@@ -64,7 +65,7 @@ namespace Kursach3.Controllers
         [HttpPost]
         public void SearchResult(string searchRow)
         {
-            IEnumerable <object> creative  = LuceneSearch.Search(searchRow);
+            IEnumerable<Creative> creative  = LuceneSearch.Search(searchRow);
         }
 
 
