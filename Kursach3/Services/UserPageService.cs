@@ -25,8 +25,8 @@ namespace Kursach3.Services
         {
             var account = new Account(
                 "dqxuyyhh2d",
-            "494215851576957",
-            "kByBGvzNRvujzAwNt70UfkbQq5k");
+                "494215851576957",
+                "kByBGvzNRvujzAwNt70UfkbQq5k");
             var cloudinary = new Cloudinary(account);
             var uploadParams = new ImageUploadParams
             {

@@ -22,10 +22,14 @@ namespace Kursach3
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                      "~/Scripts/angular.min.js"));
+                      "~/Scripts/angular.min.js",
+                      "~/Scripts/angular-ui-router.min.js",
+                      "~/Scripts/angular-route.min.js",
+                      "~/Scripts/angular-resource.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
                       "~/Scripts/app.js",
+                      "~/Scripts/Controllers/searchController.js",
                       "~/Scripts/Controllers/popularCreativeController.js",
                       "~/Scripts/Controllers/newCreativeController.js",
                       "~/Scripts/Controllers/userDataController.js",
@@ -35,7 +39,8 @@ namespace Kursach3
                       "~/Scripts/Services/homePageService.js",
                       "~/Scripts/Services/userPageService.js",
                       "~/Scripts/Directives/modalDialog.js",
-                      "~/Scripts/Directives/tagInput.js"));
+                      "~/Scripts/Directives/tagInput.js",
+                      "~/Scripts/Configs/readConfig.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
