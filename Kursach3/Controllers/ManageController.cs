@@ -7,10 +7,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Kursach3.Models;
+using Kursach3.Filters;
 
 namespace Kursach3.Controllers
 {
     [Authorize]
+    [Culture]
     public class ManageController : DefaultController
     {
         private ApplicationSignInManager _signInManager;

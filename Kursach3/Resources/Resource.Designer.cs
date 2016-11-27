@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to account.
+        /// </summary>
+        public static string Account {
+            get {
+                return ResourceManager.GetString("Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Added.
         /// </summary>
         public static string Added {
@@ -70,11 +79,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Associate your Vkontakte account.
+        ///   Looks up a localized string similar to Associate your account.
         /// </summary>
-        public static string AssociateYourVkontakteAccount {
+        public static string AssociateYour {
             get {
-                return ResourceManager.GetString("AssociateYourVkontakteAccount", resourceCulture);
+                return ResourceManager.GetString("AssociateYour", resourceCulture);
             }
         }
         
@@ -88,11 +97,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You&apos;ve successfully authenticated with Vkontakte. Please enter a user name for this site below and click the Register button to finish logging in..
+        ///   Looks up a localized string similar to You&apos;ve successfully authenticated with.
         /// </summary>
-        public static string AssociationFormLongText {
+        public static string AssociationFormLongText1 {
             get {
-                return ResourceManager.GetString("AssociationFormLongText", resourceCulture);
+                return ResourceManager.GetString("AssociationFormLongText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a user name for this site below and click the Register button to finish logging in..
+        /// </summary>
+        public static string AssociationFormLongText2 {
+            get {
+                return ResourceManager.GetString("AssociationFormLongText2", resourceCulture);
             }
         }
         
@@ -192,6 +210,15 @@ namespace Resources {
         public static string LastEdit {
             get {
                 return ResourceManager.GetString("LastEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edited.
+        /// </summary>
+        public static string LastRedact {
+            get {
+                return ResourceManager.GetString("LastRedact", resourceCulture);
             }
         }
         

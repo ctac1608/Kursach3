@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kursach3.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Kursach3.Controllers
 {
     public class DefaultController : Controller
     {
+        [Culture]
         public ActionResult ChangeCulture(string lang)
         {
             string returnUrl = Request.UrlReferrer.AbsolutePath;

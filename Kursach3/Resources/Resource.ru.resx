@@ -120,14 +120,14 @@
   <data name="Added" xml:space="preserve">
     <value>Добавлен</value>
   </data>
-  <data name="AssociateYourVkontakteAccount" xml:space="preserve">
-    <value>Связать с аккаунтом ВКонтакте</value>
+  <data name="AssociateYour" xml:space="preserve">
+    <value>Связать с аккаунтом </value>
   </data>
   <data name="AssociationForm" xml:space="preserve">
     <value>Форма для связывания</value>
   </data>
-  <data name="AssociationFormLongText" xml:space="preserve">
-    <value>Вы успешно авторизировались с ВКонтакте. Пожалуйста, введите имя пользователя ниже для этого сайта и нажмите Регистрация для завершения.</value>
+  <data name="AssociationFormLongText1" xml:space="preserve">
+    <value>Вы успешно авторизировались с</value>
   </data>
   <data name="AZ" xml:space="preserve">
     <value>А-Я</value>
@@ -160,7 +160,7 @@
     <value>Введите тег</value>
   </data>
   <data name="LastEdit" xml:space="preserve">
-    <value>Последний добавленный</value>
+    <value>Последний отредактированный</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Логин</value>
@@ -203,5 +203,11 @@
   </data>
   <data name="NEW_" xml:space="preserve">
     <value>НОВЫЕ</value>
+  </data>
+  <data name="AssociationFormLongText2" xml:space="preserve">
+    <value>Пожалуйста, введите имя пользователя ниже для этого сайта и нажмите Регистрация для завершения.</value>
+  </data>
+  <data name="LastRedact" xml:space="preserve">
+    <value>Отредактирован</value>
   </data>
 </root>

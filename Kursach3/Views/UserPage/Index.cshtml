@@ -37,9 +37,9 @@
                     <div class="thismargin">
                         
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-xs-2 col-form-label">Name:</label>
+                            <label for="example-text-input" class="col-xs-2 col-form-label">@Resources.Resource.Name:</label>
                             <div class="col-xs-10">
-                                <input class="form-control" type="text" placeholder="Название креатива" id="example-text-input" ng-model="creative.Name">
+                                <input class="form-control" type="text" placeholder=@Resources.Resource.CreativeName id="example-text-input" ng-model="creative.Name">
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
 
                                         <div class="form-group row" style="margin-bottom: 0">
                                             <div class="col-xs-10">
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название главы" ng-model="ChapterView.Name">
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=@Resources.Resource.ChapterName ng-model="ChapterView.Name">
                                             </div>
                                             
                                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -63,7 +63,7 @@
 
                                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                         <div class="panel-body">
-                                            <div class="summernote"><p>Текст главы</p></div>
+                                            <div class="summernote"><p>@Resources.Resource.ChapterText</p></div>
 
                                         </div>
 
@@ -75,7 +75,7 @@
                                                     <div class="card" ng-cloak>
 
                                                         
-                                                        <input class="form-control input-tags" data-tag-input="" data-ng-model="tagText" placeholder="Введите тег" data-ng-style="{width: inputWidth}" data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
+                                                        <input class="form-control input-tags" data-tag-input="" data-ng-model="tagText" placeholder=@Resources.Resource.EnterATag data-ng-style="{width: inputWidth}" data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
 
                                                         <div class="tag badge" data-ng-repeat="(id, tag) in tags">
                                                             {{ tag.Name }}
@@ -97,26 +97,18 @@
                     @*<div data-ng-repeat="(Id, chapter) in chapters">
                         {{chapter.Name}}
                     </div>*@
-                    
-
-
                         <br />
                     <div class="col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
-                        <button type="button" class="btn btn-default btn-lg" ng-click="createCreative();hideModal()">Сохранить креатив</button>
-                    </div>
-                    
+                        <button type="button" class="btn btn-default btn-lg" ng-click="createCreative();hideModal()">@Resources.Resource.SaveCreative</button>
+                    </div>                 
                 </modal-dialog>
-                
-
-
-
             </div>
             
 
             <div class="sort btn-group btn-group-s" role="group" aria-label="...">
-                <button type="button" class="btn btn-default">A-Я</button>
-                <button type="button" class="btn btn-default">Last edit</button>
-                <button type="button" class="btn btn-default">New</button>
+                <button type="button" class="btn btn-default">@Resources.Resource.AZ</button>
+                <button type="button" class="btn btn-default">@Resources.Resource.LastEdit</button>
+                <button type="button" class="btn btn-default">@Resources.Resource.New</button>
             </div>
         </div>
 
@@ -129,8 +121,8 @@
                         <hr />
                         <div id="link-for-name" class="position-link">
                         </div>
-                        <p class="date size-of-text">Добавлен: {{creative.CreateData}}</p>
-                        <p class="date">Последнее редактирование: {{creative.RedactData}}</p>
+                        <p class="date size-of-text">@Resources.Resource.Added: {{creative.CreateData}}</p>
+                        <p class="date">@Resources.Resource.LastRedact: {{creative.RedactData}}</p>
                         <div id="rateYo"></div>
                     
              

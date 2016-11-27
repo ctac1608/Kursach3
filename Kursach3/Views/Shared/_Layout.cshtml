@@ -24,6 +24,17 @@
                     @if (User.Identity.IsAuthenticated)
                     {<li><a href="~/Home/AdminPage/"><img src="~/Content/Images/crown.png" /></a></li>}
                 </ul>
+                <div>
+                    @using (Html.BeginForm("ChangeCulture", "Home"))
+                    {
+                        <select name="lang">
+                            <option disabled selected>@Resources.Resource.Popular</option>
+                            <option value="ru">Русский</option>
+                            <option value="en">English</option>
+                        </select>
+                        <input type="submit" name="submit" value="@Resources.Resource.Register">
+                    }
+                </div>
                 
                     
                         <form onsubmit="submitFn(this, event);">

@@ -120,14 +120,14 @@
   <data name="Added" xml:space="preserve">
     <value>Added</value>
   </data>
-  <data name="AssociateYourVkontakteAccount" xml:space="preserve">
-    <value>Associate your Vkontakte account</value>
+  <data name="AssociateYour" xml:space="preserve">
+    <value>Associate your account</value>
   </data>
   <data name="AssociationForm" xml:space="preserve">
     <value>Association form</value>
   </data>
-  <data name="AssociationFormLongText" xml:space="preserve">
-    <value>You've successfully authenticated with Vkontakte. Please enter a user name for this site below and click the Register button to finish logging in.</value>
+  <data name="AssociationFormLongText1" xml:space="preserve">
+    <value>You've successfully authenticated with</value>
   </data>
   <data name="AZ" xml:space="preserve">
     <value>A-Z</value>
@@ -203,5 +203,14 @@
   </data>
   <data name="UseAnotherServiceToLogIn" xml:space="preserve">
     <value>Use another service to log in</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>account</value>
+  </data>
+  <data name="AssociationFormLongText2" xml:space="preserve">
+    <value>Please enter a user name for this site below and click the Register button to finish logging in.</value>
+  </data>
+  <data name="LastRedact" xml:space="preserve">
+    <value>Edited</value>
   </data>
 </root>
