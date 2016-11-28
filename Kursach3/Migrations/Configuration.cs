@@ -24,7 +24,7 @@ namespace Kursach3.Migrations
             var userRole = new IdentityRole { Name = "user" };
             roleManager.Create(adminRole);
             roleManager.Create(userRole);
-            var admin = new ApplicationUser { Email = "admin@mail.ru", UserName = "moderator" };
+            var admin = new ApplicationUser { Email = "admin@mail.ru", UserName = "admin", Login = "admin" };
             string password = "!Q@w3e4";
             var result = userManager.Create(admin, password);
             if (result.Succeeded)

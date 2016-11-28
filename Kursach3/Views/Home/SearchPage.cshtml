@@ -10,13 +10,17 @@
     <div class="popular">
         <div ng-repeat="user in users" class="creative-in-SearchPage well">
             <a href="http://localhost:52038/Creative/CreativeReader/#{{user.Creatives[0].Id}}" class="style-for-name">{{user.Creatives[0].Name}}</a>
-            <hr />
-            <div id="link-for-name" class="position-link">
-                <a href="http://localhost:52038/UserPage/Index/{{user.Id}}" class="date">{{user.Login}}</a>
+        {{Search.Result}} @Resources.Resource.OnRequest:
+        @*{{Search.Row}}*@
+            <div ng-repeat="user in users" class="creative-in-SearchPage well">
+                <p id="name" class="style-for-name">{{creative.Name}}</p>
+                <hr />
+                <div id="link-for-name" class="position-link">
+                    <a href="http://localhost:52038/UserPage/Index/{{user.Id}}" class="date">{{user.Login}}</a>
+                </div>
+                <p class="date">@Resources.Resource.Added: {{user.Creatives[0].CreateData}}</p>
+                <p class="date">{{user.Creatives[0].RedactData}}</p>
+                <div id="rateYo"></div>
             </div>
-            <p class="date">@Resources.Resource.Added: {{user.Creatives[0].CreateData}}</p>
-            <p class="date">{{user.Creatives[0].RedactData}}</p>
-            <div id="rateYo"></div>
-        </div>
     </div>
  </div>

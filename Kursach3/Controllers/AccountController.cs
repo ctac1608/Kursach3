@@ -70,10 +70,10 @@ namespace Kursach3.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(model);
-            //}
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
 
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
@@ -152,7 +152,7 @@ namespace Kursach3.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Login = model.Login, AvatarUrl = "/Content/Images/user.png" };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Login = model.Login, AvatarUrl = "/Content/Images/Day/user.png" };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 //await UserManager.AddToRoleAsync(user.Id, "user");
                 if (result.Succeeded)

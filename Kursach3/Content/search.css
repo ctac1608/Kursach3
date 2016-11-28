@@ -66,12 +66,11 @@
     transform: translate(0, 10px);
 }
 
-.search-wrapper .input-holder .search-icon {
+.search-wrapper .input-holder {
     width:30px;
     height:30px;
     border:none;
     border-radius:10px;
-    background: #FFF;
 
     outline:none;
     position: relative;
@@ -82,10 +81,11 @@
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
 .search-wrapper.active .input-holder .search-icon {
     width: 26px; /*размер иконки при открытии*/
     height:26px;
-    margin: 3px;
+    margin: 2px;
     border-radius: 30px;
 }
 .search-wrapper .input-holder .search-icon span {
@@ -112,17 +112,17 @@
     content:'';
 }
 .search-wrapper .input-holder .search-icon span::before {
-    background-image: url(Images/Day/lupa.png);
+    background-image: url(Images/lupa.png);
 }
 .search-wrapper .input-holder .search-icon span::after {
-   background-image: url(Images/Day/lupa.png); 
+   background-image: url(Images/lupa.png); 
 }
 
 .search-wrapper .close {
     position: absolute;
     z-index: 1;
     top:3px;
-    right:0px;
+    right:2px;
     width:25px;
     height:25px;
     cursor: pointer;
