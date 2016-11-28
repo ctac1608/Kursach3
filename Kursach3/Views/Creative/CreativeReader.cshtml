@@ -9,7 +9,7 @@
     <div class="main-div" ng-controller="readController">
         <div class="col-sm-3 col-md-3 col-xs-3 chapters-list">
             <div class="list-group">
-                <a class="list-group-item" ng-repeat="chapter in creative.Chapters"  href="#{{chapter.Id}}"><h4>{{chapter.Name}}</h4></a>
+                <a class="list-group-item" ng-repeat="chapter in creative.Chapters" href="#{{chapter.Id}}"><h4>{{chapter.Name}}</h4></a>
             </div>
         </div>
         <div class="col-sm-7 col-md-8 col-xs-8 full-creative jumbotron">
@@ -18,9 +18,8 @@
                 <p id="{{chapter.Id}}"></p><br /><br /><br />
                 <h3>{{chapter.Name}}</h3>
                 @Html.Raw("{{chapter.Text}}")
-    <div class="tag" ng-repeat="tag in chapter.Tags">{{tag.Name}}</div>
-            <div class="between-cloud-and-panel"></div>
-            
+                <div class="tag" ng-repeat="tag in chapter.Tags">{{tag.Name}}</div>
+                <div class="between-cloud-and-panel"></div>
             </div>
             <div class="float-with-buttons-left"><a href=""><h4>Имя чувака</h4></a></div>
             <div class="float-with-buttons-right"><img src="~/Content/Images/Day/pencil.png" /></div>

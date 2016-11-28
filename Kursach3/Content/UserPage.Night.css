@@ -1,0 +1,9 @@
+﻿.ng-modal-dialog {
+    background-color: #00bc8c;
+}
+a.href-to-setting {
+    background-image: url("../Content/Images/Night/pencil.png");
+}
+div.href-to-add-modal-dialog {
+    background-image: url("../Content/Images/Night/add.png");
+}
