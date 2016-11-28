@@ -101,12 +101,12 @@ namespace Kursach3
             var result = await base.PasswordSignInAsync(userName, password, isPersistent, shouldLockout);
             using (var db = new ApplicationDbContext())
             {
-                var user = db.Users.Single(u => u.UserName == userName);
-                if (user.Ban == true)
-                {
-                    base.AuthenticationManager.SignOut();
-                    return SignInStatus.LockedOut;
-                }
+                //var user = db.Users.Single(u => u.UserName == userName);
+                //if (user.Ban == true)
+                //{
+                //    base.AuthenticationManager.SignOut();
+                //    return SignInStatus.LockedOut;
+                //}
 
             }
             return result;

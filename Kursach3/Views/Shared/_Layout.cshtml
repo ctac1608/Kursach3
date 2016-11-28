@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -22,7 +24,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="~/Home/Index/"><img src="~/Content/Images/homeNew.png" /></a></li>
-                    @if (User.Identity.IsAuthenticated)
+                    @if (User.Identity.Name == "admin")
                     {<li><a href="~/Home/AdminPage/"><img src="~/Content/Images/crownNew.png" /></a></li>}
                 </ul>
                 
