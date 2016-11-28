@@ -231,4 +231,7 @@
   <data name="Manage" xml:space="preserve">
     <value>Управление</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
 </root>
