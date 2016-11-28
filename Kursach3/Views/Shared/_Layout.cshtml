@@ -50,10 +50,11 @@
     </div>
     
     <div class="position-switches">
+        @using (Html.BeginForm("ChangeCulture"))
         <form action="">
             <fieldset>
                 <span class="moon-sun">
-                    <input type="checkbox" tabindex="32" name="ct0" id="ct0">
+                    <input type="checkbox" tabindex="32" name="ct0" id="ct0" />
                     <label for="ct0">
                         <span></span>
                         <i class="cloud"></i>
