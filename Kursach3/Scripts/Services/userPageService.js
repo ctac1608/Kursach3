@@ -1,26 +1,31 @@
-﻿app.service("userPageService", function ($http) {
+﻿app.service("userPageService", function ($http, $location) {
 
     this.getUser = function (scope) {
-        $http.get("/UserPage/GetUser/").then(function (response) {
-            scope.user = response.data;
-        });
+
+        if ($location.absUrl().substr(38, $location.absUrl().length - 38) == '')
+            $http.get("/UserPage/GetMe/").then(function (response) {
+                scope.user = response.data;
+            });
+
+        else {
+            $http.post("/UserPage/GetUser/", { userId: $location.absUrl().substr(38, $location.absUrl().length - 38) }).then(function (response) {
+                scope.user = response.data;
+            });
+        }
     };
 
     this.getUserCreatives = function (scope) {
-        scope.creatives = [];
-        scope.creative = {
-            Id: null,
-            Name: null,
-            Rank: null,
-            Count: null,
-            CreateData: null,
-            RedactData: null,
-            UserId: null
-        };
 
-        $http.get("/UserPage/GetUserCreatives/").then(function (response) {
-            scope.creatives = response.data;
-        });
+        if ($location.absUrl().substr(38, $location.absUrl().length - 38) == '')
+            $http.get("/UserPage/GetMyCreatives/").then(function (response) {
+                scope.creatives = response.data;
+            });
+
+        else {
+            $http.post("/UserPage/GetUserCreatives/", { userId: $location.absUrl().substr(38, $location.absUrl().length - 38) }).then(function (response) {
+                scope.creatives = response.data;
+            });
+        }
     };
 
 

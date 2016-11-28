@@ -18,19 +18,32 @@ namespace Kursach3.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.UserId = User.Identity.GetUserId();
             return View();
         }
 
         [HttpGet]
-        public string GetUser()
+        public string GetMe()
         {
             return UserPageService.GetUser(User.Identity.GetUserId());
         }
 
+        [HttpPost]
+        public string GetUser(string userId)
+        {
+            return UserPageService.GetUser(userId);
+        }
+
         [HttpGet]
-        public string GetUserCreatives()
+        public string GetMyCreatives()
         {
             return UserPageService.GetUserCreatives(User.Identity.GetUserId());
+        }
+
+        [HttpPost]
+        public string GetUserCreatives(string userId)
+        {
+            return UserPageService.GetUserCreatives(userId);
         }
 
         [HttpPost]
