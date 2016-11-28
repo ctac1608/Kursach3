@@ -2,7 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 
-<div>
+<div class="vertical-indent">
 
     <h1 class="style-of-text-h1">@Resources.Resource.Popular</h1>
 
@@ -23,7 +23,8 @@
 
     <div ng-controller="newCreativeController" class="new">
 
-        <div ng-repeat="user in users" class="creative-in-UserPage well well-lg">
+        <div ng-repeat="creative in creatives" class="col-md-4 col-sm-6 col-xs-12">
+            <div class="well">
 
             <p id="name" class="style-for-name">{{user.Creatives[0].Name}}</p>
             <hr />

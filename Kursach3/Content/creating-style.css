@@ -33,3 +33,11 @@ div.container div.row div.col-md-12 div.panel div.panel-heading h3.panel-title {
 .margintop{
     margin-top: 4px;
 }
+.float-with-buttons-left{
+    float:left;
+}
+.float-with-buttons-right{
+    float: right;
+    margin-right: 50px;
+}
+

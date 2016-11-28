@@ -160,7 +160,7 @@
     <value>Теги</value>
   </data>
   <data name="LastEdit" xml:space="preserve">
-    <value>Последний отредактированный</value>
+    <value>Последние</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Логин</value>
@@ -172,7 +172,7 @@
     <value>Имя</value>
   </data>
   <data name="New" xml:space="preserve">
-    <value>Новый</value>
+    <value>Новые</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Пароль</value>
