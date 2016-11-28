@@ -47,7 +47,7 @@ namespace Kursach3.Services
                     {
                         Id = creative.UserId,
                         Login = db.Users.Find(creative.UserId).Login,
-                        Creatives = creatives.ToArray()
+                        Creatives = new Creative[] { creative }
                     });
                 }
 
@@ -71,7 +71,7 @@ namespace Kursach3.Services
                     {
                         Id = creative.UserId,
                         Login = db.Users.Find(creative.UserId).Login,
-                        Creatives = creatives.ToArray()
+                        Creatives = new Creative[] { creative }
                     });
                 }
 
