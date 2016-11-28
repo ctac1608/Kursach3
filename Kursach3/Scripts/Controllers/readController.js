@@ -1,4 +1,4 @@
-﻿app.controller('readController', function ($scope, $location, $routeParams, $http) {
+﻿app.controller('readController',function ($scope, $location, $routeParams, $http, $sce) {
 
 
     $scope.creative = {
@@ -26,12 +26,15 @@
         ChapterId: null
     };
 
-    
+    $scope.tustedHtml = function (html) {
+       return $sce.trustAsHtml(html);
+    }
 
 
     $http.post("/Creative/GetCreative/", $scope.creative).then(function (response) {
         $scope.creative = response.data;
+     
     });
-
+    
 
 });

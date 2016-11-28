@@ -21,12 +21,12 @@
             <div class="float-with-buttons-right"><img src="~/Content/Images/Day/pencil.png" /></div>
             <div class="between-cloud-and-panel"></div>
             <div ng-repeat="chapter in creative.Chapters">
-                <p id="/{{chapter.Id}}"></p><br />
+                <p id="{{chapter.Id}}"></p><br />
                 <h3>{{chapter.Name}}</h3>
-                @*<h4>@Html.Raw("{{chapter.Text}}")</h4>*@
-                <div ng-bind-html="chapter.Text"></div>
-                <div class="tag badge" data-ng-repeat="tag in chapter.Tags">
-                {{tag.Name}}</div>
+                <p ng-bind-html="tustedHtml(chapter.Text)"></p>
+
+
+                <div class="tag badge" data-ng-repeat="tag in chapter.Tags">{{tag.Name}}</div>
                 <div class="between-cloud-and-panel">
                 </div>
 
