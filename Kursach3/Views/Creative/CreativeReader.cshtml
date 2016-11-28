@@ -23,7 +23,8 @@
             <div ng-repeat="chapter in creative.Chapters">
                 <p id="/{{chapter.Id}}"></p><br />
                 <h3>{{chapter.Name}}</h3>
-                <h4>@Html.Raw("{{chapter.Text}}")</h4>
+                @*<h4>@Html.Raw("{{chapter.Text}}")</h4>*@
+                <div ng-bind-html="chapter.Text"></div>
                 <div class="tag badge" data-ng-repeat="tag in chapter.Tags">
                 {{tag.Name}}</div>
                 <div class="between-cloud-and-panel">

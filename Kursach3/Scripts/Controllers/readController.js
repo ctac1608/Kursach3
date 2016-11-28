@@ -1,6 +1,5 @@
 ﻿app.controller('readController', function ($scope, $location, $routeParams, $http) {
 
-    esc_html
 
     $scope.creative = {
         //Id: parseInt($location.absUrl().match(/\d+$/g)),
