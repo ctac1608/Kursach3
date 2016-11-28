@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace Kursach3.Controllers
 {
@@ -16,6 +17,7 @@ namespace Kursach3.Controllers
     {
         public ActionResult CreativeReader()
         {
+            ViewBag.UserId = User.Identity.GetUserId();
             return View();
         }
 
