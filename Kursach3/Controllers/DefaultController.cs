@@ -13,18 +13,12 @@ namespace Kursach3.Controllers
         public ActionResult ChangeCulture(string lang)
         {
             string returnUrl = Request.UrlReferrer.AbsolutePath;
-            // Список культур
             List<string> cultures = new List<string>() { "ru", "en" };
-            if (!cultures.Contains(lang))
-            {
-                lang = "en";
-            }
+            if (!cultures.Contains(lang)) { lang = "en"; }
             HttpCookie cookie = Request.Cookies["lang"];
-            if (cookie != null)
-                cookie.Value = lang;   // если куки уже установлено, то обновляем значение
+            if (cookie != null) cookie.Value = lang;   
             else
             {
-
                 cookie = new HttpCookie("lang");
                 cookie.HttpOnly = false;
                 cookie.Value = lang;

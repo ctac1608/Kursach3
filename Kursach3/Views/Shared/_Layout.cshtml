@@ -20,25 +20,22 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="~/Home/Index/"><img src="~/Content/Images/home.png" /></a></li>
+                    <li><a href="~/Home/Index/"><img src="~/Content/Images/homeNew.png" /></a></li>
                     @if (User.Identity.IsAuthenticated)
-                    {<li><a href="~/Home/AdminPage/"><img src="~/Content/Images/crown.png" /></a></li>}
+                    {<li><a href="~/Home/AdminPage/"><img src="~/Content/Images/crownNew.png" /></a></li>}
                 </ul>
-                        <form ng-submit="search()">
-                            <div class="search-wrapper" ng-controller="searchController">
-                                <div class="input-holder">
-                                    <input type="text" ng-modal="searchRow" ng-keyup="$event.keyCode == 13 && search()" class="search-input" placeholder="Type to search" />
-                                    <img src="~/Content/Images/lupa.png" style="padding:3px;" class="search-icon" onclick="searchToggle(this, event)"><span></span>
-                                </div>
-                                <span class="close" onclick="searchToggle(this, event);"></span>
-                                <div class="result-container">
-                                </div>
-                            </div>
-                        </form>
-                    
-                    
-                    
-                    
+                
+                <form ng-submit="search()">
+                    <div class="search-wrapper" ng-controller="searchController">
+                        <div class="input-holder">
+                            <input data-ng-model="searchRow" ng-keyup="$event.keyCode == 13 && search()" class="search-input" placeholder="Type to search" />
+                            <img src="~/Content/Images/Day/lupa.png" style="padding:3px;" class="search-icon" onclick="searchToggle(this, event)"><span></span>
+                        </div>
+                        <span class="close" onclick="searchToggle(this, event);"></span>
+                        <div class="result-container">
+                        </div>
+                    </div>
+                </form>                    
                 
                 @Html.Partial("_LoginPartial")
             </div>
@@ -63,10 +60,11 @@
             </fieldset>
         </form>
 
-        @using (Html.BeginForm("ChangeCulture", "Default"))
+        @using (Html.BeginForm("ChangeCulture", "Default", FormMethod.Get, new { id = "culture-form" }))
         {
-        <label class="toggleSwitch xlarge" onclick="">
-            <input type="checkbox" />
+        <label class="toggleSwitch xlarge" >
+            <input type="hidden" name="lang" id="lang-input"/>
+            <input type="checkbox" onchange="changeCulture(event)" checked='@(Request.Cookies["lang"].Value =="ru" ? true : false)'>
             <span>
                 <span>EN</span>
                 <span>RU</span>
@@ -75,7 +73,12 @@
         </label>
         }
     </div>
-
+    <script>
+        function changeCulture(e) {            
+            $("#lang-input").val(e.target.checked ? "ru" : "en");
+            $("#culture-form").submit();
+        }
+    </script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")

@@ -259,6 +259,8 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ChapterView.cs" />
     <Compile Include="ViewModels\CreativeView.cs" />
+    <Compile Include="ViewModels\Search.cs" />
+    <Compile Include="ViewModels\UserView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -272,18 +274,19 @@
     <Content Include="Content\Images\add-dark.png" />
     <Content Include="Content\Images\arrow-dark.png" />
     <Content Include="Content\Images\crown.png" />
+    <Content Include="Content\Images\crownNew.png" />
     <Content Include="Content\Images\Day\add.png" />
     <Content Include="Content\Images\Day\add24.png" />
     <Content Include="Content\Images\Day\arrow24.png" />
     <Content Include="Content\Images\Day\close.png" />
     <Content Include="Content\Images\empty.png" />
     <Content Include="Content\Images\FacebookNew.png" />
-    <Content Include="Content\Images\home.png" />
-    <Content Include="Content\Images\login.png" />
-    <Content Include="Content\Images\logout.png" />
     <Content Include="Content\Images\Day\pencil.png" />
-    <Content Include="Content\Images\man-user.png" />
-    <Content Include="Content\Images\new-user.png" />
+    <Content Include="Content\Images\homeNew.png" />
+    <Content Include="Content\Images\loginNew.png" />
+    <Content Include="Content\Images\logoutNew.png" />
+    <Content Include="Content\Images\man-userNew.png" />
+    <Content Include="Content\Images\new-userNew.png" />
     <Content Include="Content\Images\Night\add24.png" />
     <Content Include="Content\Images\Night\add.png" />
     <Content Include="Content\Images\Night\arrow24.png" />
@@ -378,6 +381,7 @@
     <Content Include="Scripts\Controllers\readController.js" />
     <Content Include="Scripts\Controllers\redactController.js" />
     <Content Include="Scripts\Controllers\searchController.js" />
+    <Content Include="Scripts\Controllers\searchPageController.js" />
     <Content Include="Scripts\Controllers\userCreativesController.js" />
     <Content Include="Scripts\Controllers\userDataController.js" />
     <Content Include="Scripts\creating-script.js" />

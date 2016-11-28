@@ -1,6 +1,7 @@
 ﻿using Kursach3.Filters;
 using Kursach3.Models;
 using Kursach3.Services;
+using Kursach3.ViewModels;
 using MvcLuceneSampleApp.Search;
 using System;
 using System.Collections.Generic;
@@ -45,6 +46,7 @@ namespace Kursach3.Controllers
                 return View(users);
             }
         }
+
         public ActionResult SearchPage()
         {
             return View();
@@ -64,9 +66,13 @@ namespace Kursach3.Controllers
         }
 
         [HttpPost]
-        public void SearchResult(string searchRow)
+        public string SearchResult(Search search)
         {
-            IEnumerable <object> creative  = LuceneSearch.Search(searchRow);
+            IEnumerable<Creative> creatives  = LuceneSearch.Search(search.Row);
+
+            if (creatives.Count() == 0) return null;
+
+            return HomePageService.SearchResult(creatives);
         }
 
 

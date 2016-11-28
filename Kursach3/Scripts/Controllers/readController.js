@@ -1,7 +1,8 @@
 ﻿app.controller('readController', function ($scope, $location, $routeParams, $http) {
 
     $scope.creative = {
-        Id: parseInt($location.absUrl().match(/\d+$/g)),
+        //Id: parseInt($location.absUrl().match(/\d+$/g)),
+        Id: $location.absUrl().substr(49, $location.absUrl().length - 49),
         Name: null,
         Chapters: []
     };

@@ -30,6 +30,7 @@ namespace Kursach3
             bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
                       "~/Scripts/app.js",
                       "~/Scripts/Controllers/searchController.js",
+                      "~/Scripts/Controllers/searchPageController.js",
                       "~/Scripts/Controllers/popularCreativeController.js",
                       "~/Scripts/Controllers/newCreativeController.js",
                       "~/Scripts/Controllers/userDataController.js",

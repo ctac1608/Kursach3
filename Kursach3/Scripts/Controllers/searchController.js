@@ -1,10 +1,8 @@
-﻿app.controller('searchController', function ($scope, $http) {
-
-    $scope.searchRow = null;
+﻿app.controller('searchController', function ($scope, $window, $location) {
 
     $scope.search = function () {
-        $http.post("/Home/SearchResult/", $scope.searchRow).then(function () {
-        });
+
+        $window.location.href = "http://localhost:52038/Home/SearchPage/" + this.searchRow;
     };
 
 });
