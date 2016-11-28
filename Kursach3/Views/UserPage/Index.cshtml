@@ -81,7 +81,7 @@
                                                             <input class="form-control" data-tag-input="" data-ng-model="tagText" placeholder=@Resources.Resource.EnterATag data-new-tag="addTag()" data-remove-tag="removeTag()" type="text" />
                                                             <div class="position-tags-in-UserPage">
                                                                 <div class="tag badge" data-ng-repeat="(id, tag) in tags">
-                                                                    {{ tag.Name }}
+                                                                    {{ tag.Name }}</div>
                                                                     <button class="tag-remove" data-ng-click="removeTag(id) ">&times;</button>
                                                                 </div>
                                                             </div>
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        
                         <br />
 
 
@@ -109,13 +109,7 @@
                                
                 </modal-dialog>
             </div>
-            
-
-            <div class="sort btn-group btn-group-s" role="group" aria-label="...">
-                <button type="button" class="btn btn-default">@Resources.Resource.AZ</button>
-                <button type="button" class="btn btn-default">@Resources.Resource.LastEdit</button>
-                <button type="button" class="btn btn-default">@Resources.Resource.New</button>
-            </div>
+           
         </div>
 
         <div ng-controller="userCreativesController">

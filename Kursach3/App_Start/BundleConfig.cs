@@ -28,7 +28,10 @@ namespace Kursach3
                       "~/Scripts/angular.min.js",
                       "~/Scripts/angular-ui-router.min.js",
                       "~/Scripts/angular-route.min.js",
-                      "~/Scripts/angular-resource.min.js"));
+                      "~/Scripts/angular-resource.min.js",
+                      "~/Scripts/angular-sanitize.min.js"
+
+                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
                       "~/Scripts/app.js",
