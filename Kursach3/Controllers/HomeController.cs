@@ -3,6 +3,7 @@ using Kursach3.Models;
 using Kursach3.Services;
 using Kursach3.ViewModels;
 using MvcLuceneSampleApp.Search;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,6 +78,15 @@ namespace Kursach3.Controllers
             if (creatives.Count() == 0) return null;
 
             return HomePageService.SearchResult(creatives);
+        }
+
+        [HttpGet]
+        public string GetTags()
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                return JsonConvert.SerializeObject(db.Tags.Take(10).ToArray());
+            }
         }
 
 

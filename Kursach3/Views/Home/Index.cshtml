@@ -39,10 +39,10 @@
 </div>
     </div>
 
-    <div class="between-cloud-and-panel"></div>
-        <div style="position:relative">
+    <div class="between-cloud-and-panel" ></div>
+        <div style="position:relative" ng-controller="tagsController">
             <div id="div1">
-                <a href="http://codepen.io/fatihbs">JS</a>
+                <a href="#" ng-repeat="tag in tags">{{tag.Name}}</a>
             </div>
         </div>
     </div>

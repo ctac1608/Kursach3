@@ -25,7 +25,7 @@ namespace Kursach3.Migrations
             roleManager.Create(adminRole);
             roleManager.Create(userRole);
             var admin = new ApplicationUser { Email = "admin@mail.ru", UserName = "admin", Login = "admin" };
-            string password = "!Q@w3e4";
+            string password = "123456";
             var result = userManager.Create(admin, password);
             if (result.Succeeded)
             {
@@ -34,19 +34,6 @@ namespace Kursach3.Migrations
             }
             base.Seed(context);
 
-
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
         }
     }
 }

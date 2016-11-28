@@ -39,6 +39,7 @@ namespace Kursach3
                       "~/Scripts/Controllers/searchPageController.js",
                       "~/Scripts/Controllers/popularCreativeController.js",
                       "~/Scripts/Controllers/newCreativeController.js",
+                      "~/Scripts/Controllers/tagsController.js",
                       "~/Scripts/Controllers/userDataController.js",
                       "~/Scripts/Controllers/userCreativesController.js",
                       "~/Scripts/Controllers/addController.js",
