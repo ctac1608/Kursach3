@@ -11,6 +11,9 @@ namespace Kursach3
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery.rateyo.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/summernote").Include(
+                        "~/Scripts/summernote.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -43,8 +46,13 @@ namespace Kursach3
                       "~/Scripts/Directives/tagInput.js",
                       "~/Scripts/Configs/readConfig.js"));
 
+            bundles.Add(new StyleBundle("~/Content/day").Include(
+                      "~/Content/bootstrap.css"));
+
+            bundles.Add(new StyleBundle("~/Content/night").Include(
+                      "~/Content/bootstrap.darkly.css"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
                       "~/Content/Site.css",
                       "~/Content/search.css",
                       "~/Content/creative-reader-style.css",
@@ -55,6 +63,7 @@ namespace Kursach3
                       "~/Content/userpage.css",
                       "~/Content/jquery.rateyo.css",
                       "~/Content/summernote.css"));
+
         }
     }
 }

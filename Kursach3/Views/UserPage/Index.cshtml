@@ -2,6 +2,8 @@
     ViewBag.Title = "Index";
 }
 <link href="~/Content/UserPage.Day.css" rel="stylesheet" />
+@*<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/jquery.rateyo.min.js"></script>*@
 <div>
     
     <div class="user-data jumbotron" ng-controller="userDataController">
@@ -67,7 +69,7 @@
 
                                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                         <div class="panel-body">
-                                            <div class="summernote"><p>@Resources.Resource.ChapterText</p></div>
+                                            <div id="summernote"><p>@Resources.Resource.ChapterText</p></div>
                                         </div>
 
 
@@ -119,15 +121,36 @@
         </div>
 
         <div ng-controller="userCreativesController">
-            <div ng-click="openCreative()" class="col-md-4 col-sm-6 col-xs-12" ng-repeat="creative in creatives">
+            <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="creative in creatives">
                 <div class="creative-in-UserPage well">
-                        <p class="style-for-name">{{creative.Name}}</p>
+                        <input type="hidden" class="creative-id" value="{{creative.Id}}" />
+                        <a ng-click="openCreative()" class="style-for-name">{{creative.Name}}</a>
                         <hr />
                         <div id="link-for-name" class="position-link">
                         </div>
                         <p class="date size-of-text">@Resources.Resource.Added: {{creative.CreateData}}</p>
                         <p class="date">@Resources.Resource.LastRedact: {{creative.RedactData}}</p>
-                        <div id="rateYo"></div>
+                        <div class="rateYo">{{creative.Rank}}</div>
+                        <script>
+                            $(function () {
+                                $(".rateYo").rateYo({
+                                    rating: $('.rateYou').last().html(),
+                                    onSet: function (rating, rateYoInstance) {
+                                        jQuery.ajax({
+                                            type: "POST",
+                                            url: "/UserPage/ChangeRank/",
+                                            data: JSON.stringify({
+                                                rank: rating,
+                                                creativeId: $('.creative-id').last().val()
+                                            }),
+                                            contentType: "application/json; charset=utf-8",
+                                            dataType: "json"
+                                        });
+
+                                    }
+                                });
+                            });
+                        </script>
                 </div>
             </div>
         </div>
@@ -135,11 +158,7 @@
     </div>
 </div>
 
-@section scripts {    
-    <script src="~/Scripts/creating-script.js"></script>
-    <script src="~/Scripts/summernote.js"></script>
-
-    <script>
+<script>
         $(function () {
 
             $("#rateYo").rateYo({
@@ -147,11 +166,17 @@
             });
 
         });
-    </script>
+</script>
+
+@section scripts {    
+    @*<script src="~/Scripts/creating-script.js"></script>*@
+    <script src="~/Scripts/summernote.js"></script>
+
+
 
     <script>
         $(document).ready(function() {
-            $('.summernote').summernote();
+            $('#summernote').summernote();
         });
     </script>
 

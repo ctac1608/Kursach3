@@ -7,8 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @{if (Request.Cookies["style"]?.Value == "night")
+        {
+            @Styles.Render("~/Content/night");
+        }
+        else
+        {
+            @Styles.Render("~/Content/day");
+        }
+    }
     @Scripts.Render("~/bundles/modernizr")
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body ng-app="createApp">
     <link href="~/Content/UserPage.Day.css" rel="stylesheet" />
@@ -24,7 +34,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="~/Home/Index/"><img src="~/Content/Images/homeNew.png" /></a></li>
-                    @if (User.Identity.Name == "admin")
+                    @if (User.IsInRole("admin"))
                     {<li><a href="~/Home/AdminPage/"><img src="~/Content/Images/crownNew.png" /></a></li>}
                 </ul>
                 
@@ -50,10 +60,11 @@
     </div>
     
     <div class="position-switches">
-        <form action="">
+        @using (Html.BeginForm("ChangeStyle", "Default", FormMethod.Get, new { id = "style-form" }))
+        {
             <fieldset>
                 <span class="moon-sun">
-                    <input type="checkbox" tabindex="32" name="ct0" id="ct0">
+                    <input type="checkbox" onchange="changeStyle(event)" tabindex="32" name="ct0" id="ct0" checked='@(Request.Cookies["style"]?.Value =="night" ? true : false)'>
                     <label for="ct0">
                         <span></span>
                         <i class="cloud"></i>
@@ -61,13 +72,13 @@
                     </label>
                 </span>
             </fieldset>
-        </form>
+        }
 
         @using (Html.BeginForm("ChangeCulture", "Default", FormMethod.Get, new { id = "culture-form" }))
         {
-        <label class="toggleSwitch xlarge" >
+            <label class="toggleSwitch xlarge" >
             <input type="hidden" name="lang" id="lang-input"/>
-            <input type="checkbox" onchange="changeCulture(event)" checked='@(Request.Cookies["lang"].Value =="ru" ? true : false)'>
+            <input type="checkbox" onchange="changeCulture(event)" checked='@(Request.Cookies["lang"]?.Value =="ru" ? true : false)'>
             <span>
                 <span>EN</span>
                 <span>RU</span>
@@ -76,17 +87,26 @@
         </label>
         }
     </div>
+
     <script>
         function changeCulture(e) {            
             $("#lang-input").val(e.target.checked ? "ru" : "en");
             $("#culture-form").submit();
         }
+
+        function changeStyle(e) {
+            $("#style-input").val(e.target.checked ? "night" : "day");
+            $("#style-form").submit();
+        }
     </script>
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")
     @Scripts.Render("~/bundles/angularApp")
+    @*@Scripts.Render("~/bundles/summernote")*@
     @RenderSection("scripts", required: false)
     <script src="~/Scripts/Search.js"></script>
+    
 </body>
 </html>

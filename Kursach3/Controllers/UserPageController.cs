@@ -57,11 +57,11 @@ namespace Kursach3.Controllers
         {
             UserPageService.ChangeAvatar(UserPageService.UploadAvatar(src), User.Identity.GetUserId());
         }
-        
-        [HttpPost]
-        public void GetCreative(int creativeId)
-        {
 
+        [HttpPost]
+        public void ChangeRank(float rank, int creativeId)
+        {
+            UserPageService.ChangeRank(rank, creativeId);
         }
     }
 }

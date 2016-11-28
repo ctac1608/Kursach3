@@ -45,6 +45,16 @@ namespace Kursach3.Services
             }
         }
 
+        public static void ChangeRank(float rank, int creativeId)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                Creative creative = db.Creatives.Find(creativeId);
+                creative.Rank = rank;
+                db.SaveChanges();
+            }
+        }
+
         public static string GetUserCreatives(string userId)
         {
             using (var db = new ApplicationDbContext())

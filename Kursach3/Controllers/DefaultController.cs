@@ -27,5 +27,23 @@ namespace Kursach3.Controllers
             Response.Cookies.Add(cookie);
             return Redirect(returnUrl);
         }
+
+        public ActionResult ChangeStyle(string style)
+        {
+            string returnUrl = Request.UrlReferrer.AbsolutePath;
+            List<string> styles = new List<string>() { "night", "day" };
+            if (!styles.Contains(style)) { style = "day"; }
+            HttpCookie cookie = Request.Cookies["style"];
+            if (cookie != null) cookie.Value = style;
+            else
+            {
+                cookie = new HttpCookie("style");
+                cookie.HttpOnly = false;
+                cookie.Value = style;
+                cookie.Expires = DateTime.Now.AddYears(1);
+            }
+            Response.Cookies.Add(cookie);
+            return Redirect(returnUrl);
+        }
     }
 }

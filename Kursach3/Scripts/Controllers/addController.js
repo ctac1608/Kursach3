@@ -1,6 +1,6 @@
 ﻿app.controller('addController', function ($scope, $http) {
 
-    $scope.addShow = false;
+    $scope.addShow = add;
 
     //if ($location.absUrl().substr(38, $location.absUrl().length - 38) == '')
     //    $scope.addShow = true;
@@ -68,11 +68,15 @@
 
     $scope.Chapters = [];
 
+
     $scope.addChapter = function () {
+
+        $scope.chapterText = $('#summernote').summernote('code');
+
         if ($scope.ChapterView.Name.length != 0) {
             $scope.Chapters.push({
                 Name: $scope.ChapterView.Name,
-                Text: $('#summernote').summernote('code'),
+                Text: $scope.chapterText,
                 Tags: $scope.Tags
             });
 
@@ -91,7 +95,8 @@
             Name: $scope.creative.Name,
             Chapters: $scope.Chapters
         };
-
+        console.log($scope.creative.Chapters[0].Text);
+        $('#summernote').summernote('destroy');
         $http.post("/UserPage/Create/", $scope.creative).then(function () {
         });
 
