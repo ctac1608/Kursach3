@@ -14,21 +14,22 @@ namespace Kursach3.Services
 
         public static string SearchResult(IEnumerable<Creative> searchCreatives)
         {
-            UserView user = new UserView();
-            List<Creative> creatives = new List<Creative>();
+            List <UserView> users = new List<UserView>();
 
             using (var db = new ApplicationDbContext())
             {
                 foreach (Creative searchCreative in searchCreatives)
                 {
-                    creatives.Add(db.Creatives.Find(searchCreative.Id));
-                    user.Id = db.Creatives.Find(searchCreative.Id).UserId;
+                    users.Add(new UserView()
+                    {
+                        Id = db.Creatives.Find(searchCreative.Id).UserId,
+                        Login = db.Users.Find(db.Creatives.Find(searchCreative.Id).UserId).Login,
+                        Creatives = new Creative[] { db.Creatives.Find(searchCreative.Id) }
+                    });
                 }
-                user.Login = db.Users.Find(user.Id).Login;
             }
-            user.Creatives = creatives.ToArray();
 
-            return JsonConvert.SerializeObject(user);
+            return JsonConvert.SerializeObject(users);
         }
 
         public static string GetPopularCreatives()
@@ -50,9 +51,9 @@ namespace Kursach3.Services
                         Creatives = new Creative[] { creative }
                     });
                 }
-
-                return GetFiveCreatives(users);
             }
+
+            return GetFiveCreatives(users);
         }
 
         public static string GetNewCreatives()
@@ -74,9 +75,9 @@ namespace Kursach3.Services
                         Creatives = new Creative[] { creative }
                     });
                 }
-
-                return GetFiveCreatives(users);
             }
+
+            return GetFiveCreatives(users);
         }
 
         public static string GetFiveCreatives(List<UserView> users)

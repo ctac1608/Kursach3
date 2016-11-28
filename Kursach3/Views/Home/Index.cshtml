@@ -9,10 +9,10 @@
     <div ng-controller="popularCreativeController" class="popular">
 
         <div ng-repeat="user in users" class="creative-in-UserPage well">
-            <p id="name" class="style-for-name">{{user.Creatives[0].Name}}</p>
+            <a href="http://localhost:52038/Creative/CreativeReader/#{{user.Creatives[0].Id}}" class="style-for-name">{{user.Creatives[0].Name}}</a>
             <hr />
             <div id="link-for-name" class="position-link">
-                <a class="date">{{user.Login}}</a>
+                <a href="http://localhost:52038/UserPage/Index/{{user.Id}}" class="date">{{user.Login}}</a>
             </div>
             <p class="date">@Resources.Resource.Added: {{user.Creatives[0].CreateData}}</p>
             <div id="rateYo"></div>
@@ -26,15 +26,15 @@
         <div ng-repeat="user in users" class="col-md-4 col-sm-6 col-xs-12">
             <div class="well">
 
-            <p id="name" class="style-for-name">{{user.Creatives[0].Name}}</p>
-            <hr />
-            <div id="link-for-name" class="position-link">
-                <a class="date">{{user.Login}}</a>
-            </div>
-            <p class="date">@Resources.Resource.Added: {{user.Creatives[0].CreateData}}</p>
-            <div id="rateYo"></div>
+                <a href="http://localhost:52038/Creative/CreativeReader/#{{user.Creatives[0].Id}}" class="style-for-name">{{user.Creatives[0].Name}}</a>
+                    <hr />
+                    <div id="link-for-name" class="position-link">
+                        <a href="http://localhost:52038/UserPage/Index/{{user.Id}}" class="date">{{user.Login}}</a>
+                    </div>
+                    <p class="date">@Resources.Resource.Added: {{user.Creatives[0].CreateData}}</p>
+                    <div id="rateYo"></div>
 
-        </div>
+</div>
     </div>
 
     <div class="between-cloud-and-panel"></div>

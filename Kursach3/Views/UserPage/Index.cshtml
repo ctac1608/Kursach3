@@ -5,13 +5,14 @@
 <div>
     
     <div class="user-data jumbotron" ng-controller="userDataController">
+        <input type="hidden" id="you" value="@ViewBag.UserId" />
         <div class="avatar">
             <img src="{{user.AvatarUrl}}" class="file__drop img-rounded" data-image data-image-uploader />
         </div>
         <div>
             <div>
                 <div class="login">{{user.Login}}</div>
-                <a class="href-to-setting setting" href="/Manage/Index/"></a>
+                <a ng-show="user.Id == authorizedId" class="setting" href="/Manage/Index/"></a>
             </div>
             <div id="medal">
                 <img class="medal" src="http://s1.iconbird.com/ico/1112/Onebit4/w48h481351852735010.png" />
@@ -27,7 +28,8 @@
 
         <div id="creatives-header">
             <div id="add-dialog" ng-controller="addController">
-                <div id="add" class="href-to-add-modal-dialog" ng-click="toggleModal()"></div>
+                <input type="hidden" id="you" value="@ViewBag.UserId" />
+                <img id="add" ng-show="addShow" ng-click="toggleModal()" src="~/Content/Images/Day/add.png" />
 
 
                 <modal-dialog show='modalShown' width='80%' height='90%' >
@@ -119,7 +121,7 @@
         <div ng-controller="userCreativesController">
             <div ng-click="openCreative()" class="col-md-4 col-sm-6 col-xs-12" ng-repeat="creative in creatives">
                 <div class="creative-in-UserPage well">
-                        <p id="name" class="style-for-name">{{creative.Name}}</p>
+                        <p class="style-for-name">{{creative.Name}}</p>
                         <hr />
                         <div id="link-for-name" class="position-link">
                         </div>

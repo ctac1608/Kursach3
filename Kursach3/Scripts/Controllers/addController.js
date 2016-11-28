@@ -1,4 +1,14 @@
 ﻿app.controller('addController', function ($scope, $http) {
+
+    $scope.addShow = false;
+
+    //if ($location.absUrl().substr(38, $location.absUrl().length - 38) == '')
+    //    $scope.addShow = true;
+    //else if ($location.absUrl().substr(38, $location.absUrl().length - 38) == $("#you").val())
+    //    $scope.addShow = true;
+    //else
+    //    $scope.addShow = false;
+
     $scope.modalShown = false;
     $scope.toggleModal = function () {
         $scope.modalShown = !$scope.modalShown;
@@ -25,6 +35,17 @@
 
     $scope.tags = [];
     $scope.Tags = [];
+
+    $scope.addShown = function () {
+        if ($location.absUrl().substr(38, $location.absUrl().length - 38) == '') {
+            $scope.addShow = true;
+        }
+        else {
+            if ($location.absUrl().substr(38, $location.absUrl().length - 38) == $("#you").val()) {
+                $scope.addShow = true;
+            }
+        }
+    }
 
     $scope.addTag = function () {
         if (this.tagText.length != 0) {
