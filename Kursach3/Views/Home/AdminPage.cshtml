@@ -11,7 +11,7 @@
         <th>
             @Resources.Resource.Ban
         </th>
-        <th></th>
+        <th></th><th></th>
     </tr>
 
     @foreach (var item in Model)
@@ -28,6 +28,9 @@
             </td>
             <td>
                 @Html.ActionLink(Resources.Resource.Ban, "BanUser", new { id = item.Id })
+            </td>
+            <td>
+                <a href="../../Home/DeleteUserById/?id=@item.Id">Delete</a>
             </td>
         </tr>
     }

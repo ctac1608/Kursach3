@@ -47,6 +47,10 @@ namespace Kursach3.Controllers
             }
         }
 
+        public void DeleteUserById(string id) {
+
+        }
+
         public ActionResult SearchPage()
         {
             return View();

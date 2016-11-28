@@ -9,7 +9,7 @@ namespace Kursach3.Controllers
 {
     public class DefaultController : Controller
     {
-        [Culture]
+        [Culture] 
         public ActionResult ChangeCulture(string lang)
         {
             string returnUrl = Request.UrlReferrer.AbsolutePath;
