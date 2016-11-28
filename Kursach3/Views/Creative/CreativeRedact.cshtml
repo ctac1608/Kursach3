@@ -7,34 +7,24 @@
 
 
 
-<div>
+<div ng-controller="redactController">
     <div class="main-div">
         <div class="col-sm-3 col-md-3 col-xs-3 chapters-list">
             <div class="list-group">
-                <a href="#" class="list-group-item">
-                    Cras justo odio
-                </a>
-                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item">Morbi leo risus</a>
-                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                <a href="#" ng-repeat="chapter in creative.Chapters" class="list-group-item" ng-click="changeChapter(chapter)">{{chapter.Name}}</a>
             </div>
         </div>
         <div class="col-sm-7 col-md-8 col-xs-8 full-creative jumbotron">
             <form role="form">
                 <div class="form-group">
-                    <h2 class="style-for-h2">НАЗВАНИЕ КРЕАТИВА</h2>
+                    <h2 class="style-for-h2">{{creative.Name}}</h2>
                     <hr />
-                    <input type="text" value="Название главы(вставить из базы)" class="form-control" />
+                    <input type="text" ng-model="chapterSelect.Name" class="form-control" />
                     <hr />
                     
-                        <div class="summernote">
-                            <p>
-                                @Resources.Resource.ChapterText
-                            </p>
-                        </div>
+                        <div id="summernote"></div>
                     <div class="col-sm-offset-4 col-md-offset-5 col-xs-offset-4">
-                        <button type="submit" class="btn btn-default btn-lg">@Resources.Resource.Save</button>
+                        <button type="submit" ng-click="saveChapter(chapterSelect.Id)" class="btn btn-default btn-lg">@Resources.Resource.Save</button>
                     </div>
                 </div>
             </form>

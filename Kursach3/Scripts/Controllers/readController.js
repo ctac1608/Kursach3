@@ -1,10 +1,12 @@
 ﻿app.controller('readController', function ($scope, $location, $routeParams, $http) {
 
+    $scope.authorizedId = $("#you").val();
+
     $scope.creative = {
-        //Id: parseInt($location.absUrl().match(/\d+$/g)),
         Id: $location.absUrl().substr(49, $location.absUrl().length - 49),
         Name: null,
-        Chapters: []
+        Chapters: [],
+        UserId: null
     };
 
     $scope.Chapters = [];
@@ -24,9 +26,6 @@
         Name: null,
         ChapterId: null
     };
-
-    
-
 
     $http.post("/Creative/GetCreative/", $scope.creative).then(function (response) {
         $scope.creative = response.data;

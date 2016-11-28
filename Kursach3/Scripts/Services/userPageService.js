@@ -1,8 +1,5 @@
 ﻿app.service("userPageService", function ($http, $location) {
 
-
-
-
     this.getUser = function (scope) {
 
         if ($location.absUrl().substr(38, $location.absUrl().length - 38) == '')

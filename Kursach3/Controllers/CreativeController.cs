@@ -32,5 +32,11 @@ namespace Kursach3.Controllers
             return CreativeService.GetCreative(creative.Id);
         }
 
+        [HttpPost]
+        public void RedactChapter(Chapter redactChapter)
+        {
+            CreativeService.RedactChapter(redactChapter);
+        }
+
     }
 }

@@ -77,6 +77,7 @@ namespace Kursach3.Services
                 db.SaveChanges();
             }
 
+            if (creative.Chapters != null)
             foreach (ChapterView chapter in creative.Chapters)
             {
                 Chapter newChapter = new Chapter(chapter, newCreative.Id);
@@ -87,6 +88,7 @@ namespace Kursach3.Services
                     db.SaveChanges();
                 }
 
+                if(chapter.Tags != null)
                 foreach (Tag tag in chapter.Tags)
                 {
                     Tag newTag = new Tag(tag, newChapter.Id);

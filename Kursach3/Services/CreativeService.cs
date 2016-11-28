@@ -23,5 +23,16 @@ namespace Kursach3.Services
                 return JsonConvert.SerializeObject(new CreativeView(db.Creatives.Find(creativeId), chapters.ToArray()));
             }
         }
+
+        public static void RedactChapter(Chapter chapter)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                Chapter UpdataChapter = db.Chapters.Find(chapter.Id);
+                UpdataChapter.Name = chapter.Name;
+                UpdataChapter.Text = chapter.Text;
+                db.SaveChanges();
+            }
+        }
     }
 }

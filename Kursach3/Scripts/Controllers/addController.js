@@ -85,6 +85,8 @@
                 Text: null
             };
 
+            $('#summernote').summernote('code', '');
+
             $scope.tags = [];
             $scope.Tags = [];
         }

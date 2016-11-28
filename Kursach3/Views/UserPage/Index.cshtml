@@ -2,8 +2,6 @@
     ViewBag.Title = "Index";
 }
 <link href="~/Content/UserPage.Day.css" rel="stylesheet" />
-@*<script src="~/Scripts/jquery-2.1.4.min.js"></script>
-<script src="~/Scripts/jquery.rateyo.min.js"></script>*@
 <div>
     
     <div class="user-data jumbotron" ng-controller="userDataController">
@@ -17,8 +15,8 @@
                 <a ng-show="user.Id == authorizedId" class="setting" href="/Manage/Index/"></a>
             </div>
             <div id="medal">           
-                <img class="medal" src="~/Content/Images/gold-medal.png" />
-                <img class="medal" src="~/Content/Images/silver-medal.png" />
+                <img class="medal" src="~/Content/Images/gold-medal.png" ng-show="user.CountCreatives > 5" />
+                <img class="medal" src="~/Content/Images/silver-medal.png" ng-show="user.CountCreatives > 2" />
             </div>
         </div>
         <br />
@@ -169,7 +167,7 @@
 </script>
 
 @section scripts {    
-    @*<script src="~/Scripts/creating-script.js"></script>*@
+    <script src="~/Scripts/creating-script.js"></script>
     <script src="~/Scripts/summernote.js"></script>
 
 
