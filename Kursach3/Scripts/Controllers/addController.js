@@ -1,6 +1,6 @@
 ﻿app.controller('addController', function ($scope, $http) {
 
-    $scope.addShow = add;
+    $scope.addShow = true;
 
     //if ($location.absUrl().substr(38, $location.absUrl().length - 38) == '')
     //    $scope.addShow = true;

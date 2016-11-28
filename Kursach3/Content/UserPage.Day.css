@@ -30,3 +30,6 @@
 .search-wrapper .input-holder {
     background: #101010;
 }
+.a.setting{
+ background-image: url("../Content/Images/Day/pencil.png");
+}

@@ -16,7 +16,10 @@
             </div>
         </div>
         <div class="col-sm-7 col-md-8 col-xs-8 full-creative jumbotron">
-            <h1>{{creative.Name}}</h1>
+            <h1 class="margin-top-of-name-creative">{{creative.Name}}</h1>
+            <div class="float-with-buttons-left"><a href=""><h3>Имя чувака</h3></a></div>
+            <div class="float-with-buttons-right"><img src="~/Content/Images/Day/pencil.png" /></div>
+            <div class="between-cloud-and-panel"></div>
             <div ng-repeat="chapter in creative.Chapters">
                 <p id="/{{chapter.Id}}"></p><br /><br />i<br />
                 <h3>{{chapter.Name}}</h3>
@@ -25,8 +28,7 @@
                 <div class="between-cloud-and-panel"></div>
 
             </div>
-            <div class="float-with-buttons-left"><a href=""><h4>Имя чувака</h4></a></div>
-            <div class="float-with-buttons-right"><img src="~/Content/Images/Day/pencil.png" /></div>
+            
         </div>
     </div>
 </div>

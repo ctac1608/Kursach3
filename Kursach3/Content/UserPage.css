@@ -24,18 +24,20 @@ a.setting {
     height: 32px;
     float: left;
     position: relative;
-    /*background-image: url("../Content/Images/Day/pencil.png");*/
+   
 }
 
 #medal {
-    width: 96px;
-    height: 48px;
+    width: 128px;
+    height: 128px;
     float: right;
 }
 
 .medal {
     float: right;
     position: relative;
+    width: 64px;
+    height: 64px;
 }
 
 .creatives {

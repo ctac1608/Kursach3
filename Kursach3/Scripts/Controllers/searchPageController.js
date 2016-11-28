@@ -8,7 +8,7 @@
     $http.post("/Home/SearchResult/", $scope.search).then(function (response) {
         if (response.data == '') $scope.search.Result = "Ничего не найдено";
         else {
-            $scope.search.Result = "Результаты";
+            $scope.search.Result = "Result";
             $scope.users = response.data;
         };
     });

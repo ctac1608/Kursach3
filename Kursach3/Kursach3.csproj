@@ -273,14 +273,17 @@
     <Content Include="Content\day-night-ru-en-style.css" />
     <Content Include="Content\Images\add-dark.png" />
     <Content Include="Content\Images\arrow-dark.png" />
+    <Content Include="Content\Images\ban.png" />
     <Content Include="Content\Images\crownNew.png" />
     <Content Include="Content\Images\Day\add.png" />
     <Content Include="Content\Images\Day\add24.png" />
     <Content Include="Content\Images\Day\arrow24.png" />
     <Content Include="Content\Images\Day\close.png" />
+    <Content Include="Content\Images\delete.png" />
     <Content Include="Content\Images\empty.png" />
     <Content Include="Content\Images\FacebookNew.png" />
     <Content Include="Content\Images\Day\pencil.png" />
+    <Content Include="Content\Images\gold-medal.png" />
     <Content Include="Content\Images\homeNew.png" />
     <Content Include="Content\Images\loginNew.png" />
     <Content Include="Content\Images\logoutNew.png" />
@@ -294,6 +297,7 @@
     <Content Include="Content\Images\Night\pencil.png" />
     <Content Include="Content\Images\Night\user.png" />
     <Content Include="Content\Images\Day\user.png" />
+    <Content Include="Content\Images\silver-medal.png" />
     <Content Include="Content\Images\TwitterNew.png" />
     <Content Include="Content\Images\VkontakteNew.png" />
     <Content Include="Content\jquery.rateyo.css" />

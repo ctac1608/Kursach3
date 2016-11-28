@@ -240,4 +240,16 @@
   <data name="OnRequest" xml:space="preserve">
     <value>on this request</value>
   </data>
+  <data name="BanIt" xml:space="preserve">
+    <value>Ban</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Ничего не найдено</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Results:</value>
+  </data>
 </root>
