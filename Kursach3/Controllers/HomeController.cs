@@ -1,4 +1,5 @@
-﻿using Kursach3.Models;
+﻿using Kursach3.Filters;
+using Kursach3.Models;
 using Kursach3.Services;
 using MvcLuceneSampleApp.Search;
 using System;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace Kursach3.Controllers
 {
+    [Culture]
     public class HomeController : DefaultController
     {
         public ActionResult Index()

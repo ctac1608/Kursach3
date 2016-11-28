@@ -3,13 +3,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Login)
+            @Resources.Resource.Login
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            @Resources.Resource.Email
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ban)
+            @Resources.Resource.Ban
         </th>
         <th></th>
     </tr>
@@ -27,7 +27,7 @@
                 @Html.DisplayFor(modelItem => item.Ban)
             </td>
             <td>
-                @Html.ActionLink("Ban", "BanUser", new { id = item.Id })
+                @Html.ActionLink(Resources.Resource.Ban, "BanUser", new { id = item.Id })
             </td>
         </tr>
     }

@@ -3,7 +3,8 @@
 .card {
   background: #FFF;
   border-radius: 1px;
-  margin: 0 10px 20px 10px;
+  margin: 0 10px 25px 10px;
+  width: 70%;
 }
 
 .tag {
@@ -16,5 +17,5 @@
   background: #EEE;
 }
 .input-tags{
-    margin-left: 6px;
+    max-width: 50%;
 }

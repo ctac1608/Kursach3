@@ -1,4 +1,5 @@
-﻿using Kursach3.Models;
+﻿using Kursach3.Filters;
+using Kursach3.Models;
 using Kursach3.Services;
 using Kursach3.ViewModels;
 using Microsoft.AspNet.Identity;
@@ -11,6 +12,7 @@ using System.Web.Mvc;
 
 namespace Kursach3.Controllers
 {
+    [Culture]
     public class UserPageController : DefaultController
     {
 

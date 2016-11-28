@@ -1,4 +1,5 @@
 ﻿using Kursach3.Models;
+using Kursach3.Filters;
 using Kursach3.Services;
 using Kursach3.ViewModels;
 using Newtonsoft.Json;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace Kursach3.Controllers
 {
+    [Culture]
     public class CreativeController : DefaultController
     {
         public ActionResult CreativeReader()

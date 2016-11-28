@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to account.
+        /// </summary>
+        public static string Account {
+            get {
+                return ResourceManager.GetString("Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Added.
         /// </summary>
         public static string Added {
@@ -70,11 +79,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Associate your Vkontakte account.
+        ///   Looks up a localized string similar to There are no two-factor authentication providers configured. See this article for details on setting up this ASP.NET application to support two-factor..
         /// </summary>
-        public static string AssociateYourVkontakteAccount {
+        public static string ALotOfText3 {
             get {
-                return ResourceManager.GetString("AssociateYourVkontakteAccount", resourceCulture);
+                return ResourceManager.GetString("ALotOfText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Associate your account.
+        /// </summary>
+        public static string AssociateYour {
+            get {
+                return ResourceManager.GetString("AssociateYour", resourceCulture);
             }
         }
         
@@ -88,11 +106,29 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You&apos;ve successfully authenticated with Vkontakte. Please enter a user name for this site below and click the Register button to finish logging in..
+        ///   Looks up a localized string similar to You&apos;ve successfully authenticated with.
         /// </summary>
-        public static string AssociationFormLongText {
+        public static string AssociationFormLongText1 {
             get {
-                return ResourceManager.GetString("AssociationFormLongText", resourceCulture);
+                return ResourceManager.GetString("AssociationFormLongText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a user name for this site below and click the Register button to finish logging in..
+        /// </summary>
+        public static string AssociationFormLongText2 {
+            get {
+                return ResourceManager.GetString("AssociationFormLongText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authentication.
+        /// </summary>
+        public static string Authentication {
+            get {
+                return ResourceManager.GetString("Authentication", resourceCulture);
             }
         }
         
@@ -120,6 +156,24 @@ namespace Resources {
         public static string Changed {
             get {
                 return ResourceManager.GetString("Changed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change your account settings.
+        /// </summary>
+        public static string ChangeYourAccountSettings {
+            get {
+                return ResourceManager.GetString("ChangeYourAccountSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change your password.
+        /// </summary>
+        public static string ChangeYourPassword {
+            get {
+                return ResourceManager.GetString("ChangeYourPassword", resourceCulture);
             }
         }
         
@@ -178,11 +232,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter tegs.
+        ///   Looks up a localized string similar to Tags.
         /// </summary>
         public static string EnterATag {
             get {
                 return ResourceManager.GetString("EnterATag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ExternalLogins.
+        /// </summary>
+        public static string ExternalLogins {
+            get {
+                return ResourceManager.GetString("ExternalLogins", resourceCulture);
             }
         }
         
@@ -192,6 +255,15 @@ namespace Resources {
         public static string LastEdit {
             get {
                 return ResourceManager.GetString("LastEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edited.
+        /// </summary>
+        public static string LastRedact {
+            get {
+                return ResourceManager.GetString("LastRedact", resourceCulture);
             }
         }
         
@@ -210,6 +282,15 @@ namespace Resources {
         public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage..
+        /// </summary>
+        public static string Manage {
+            get {
+                return ResourceManager.GetString("Manage", resourceCulture);
             }
         }
         
@@ -291,6 +372,15 @@ namespace Resources {
         public static string SaveCreative {
             get {
                 return ResourceManager.GetString("SaveCreative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two-Factor.
+        /// </summary>
+        public static string TwoFactor {
+            get {
+                return ResourceManager.GetString("TwoFactor", resourceCulture);
             }
         }
         
