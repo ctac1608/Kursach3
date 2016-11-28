@@ -5,18 +5,17 @@
 }
 
 
-<div ng-app="createApp">
+<div ng-controller="searchPageController">
     
-       @*заменить репит и контроллер на то, что понадобится в поиске*@
-    <div ng-controller="popularCreativeController" class="popular">
-        <div ng-repeat="creative in creatives" class="creative-in-SearchPage well">
+    <div class="popular">
+        <div ng-repeat="creative in user.Creatives" class="creative-in-SearchPage well">
             <p id="name" class="style-for-name">{{creative.Name}}</p>
             <hr />
             <div id="link-for-name" class="position-link">
-                <a class="date">Имя чувака, чей это креатив</a>
+                <a class="date">{{user.Login}}</a>
             </div>
             <p class="date">@Resources.Resource.Added: {{creative.CreateData}}</p>
-            @*<p class="date">{{creative.RedactData}}</p>*@
+            <p class="date">{{creative.RedactData}}</p>
             <div id="rateYo"></div>
         </div>
     </div>

@@ -3,7 +3,7 @@
     userPageService.getUserCreatives($scope);
 
     $scope.openCreative = function () {
-        $window.location.href = "http://localhost:52038/Creative/CreativeReader/" + this.creative.Id;
+        $window.location.href = "http://localhost:52038/Creative/CreativeReader/#" + this.creative.Id;
     };
 
 });

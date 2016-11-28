@@ -8,14 +8,13 @@
 
     <div ng-controller="popularCreativeController" class="popular">
 
-        <div ng-repeat="creative in creatives" class="creative-in-UserPage well">
-            <p id="name" class="style-for-name">{{creative.Name}}</p>
+        <div ng-repeat="user in users" class="creative-in-UserPage well">
+            <p id="name" class="style-for-name">{{user.Creatives[0].Name}}</p>
             <hr />
             <div id="link-for-name" class="position-link">
-                <a class="date">Имя чувака, чей это креатив</a>
+                <a class="date">{{user.Login}}</a>
             </div>
-            <p class="date">@Resources.Resource.Added: {{creative.CreateData}}</p>
-            @*<p class="date">{{creative.RedactData}}</p>*@
+            <p class="date">@Resources.Resource.Added: {{user.Creatives[0].CreateData}}</p>
             <div id="rateYo"></div>
         </div>
     </div>
@@ -24,19 +23,19 @@
 
     <div ng-controller="newCreativeController" class="new">
 
-        <div ng-repeat="creative in creatives" class="creative-in-UserPage well well-lg">
+        <div ng-repeat="user in users" class="creative-in-UserPage well well-lg">
 
-            <p id="name" class="style-for-name">{{creative.Name}}</p>
+            <p id="name" class="style-for-name">{{user.Creatives[0].Name}}</p>
             <hr />
             <div id="link-for-name" class="position-link">
-                <a class="date">Имя чувака, чей это креатив</a>
+                <a class="date">{{user.Login}}</a>
             </div>
-            <p class="date">@Resources.Resource.Added: {{creative.CreateData}}</p>
-            @*<p class="date">{{creative.RedactData}}</p>*@
+            <p class="date">@Resources.Resource.Added: {{user.Creatives[0].CreateData}}</p>
             <div id="rateYo"></div>
 
         </div>
     </div>
+
     <div class="between-cloud-and-panel"></div>
     <div style="position:relative">
         <div id="div1">

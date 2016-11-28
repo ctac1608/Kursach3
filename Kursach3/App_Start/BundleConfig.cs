@@ -30,13 +30,13 @@ namespace Kursach3
             bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
                       "~/Scripts/app.js",
                       "~/Scripts/Controllers/searchController.js",
+                      "~/Scripts/Controllers/searchPageController.js",
                       "~/Scripts/Controllers/popularCreativeController.js",
                       "~/Scripts/Controllers/newCreativeController.js",
                       "~/Scripts/Controllers/userDataController.js",
                       "~/Scripts/Controllers/userCreativesController.js",
                       "~/Scripts/Controllers/addController.js",
                       "~/Scripts/Controllers/readController.js",
-                      "~/Scripts/Controllers/searchPageController.js",
                       "~/Scripts/Services/homePageService.js",
                       "~/Scripts/Services/userPageService.js",
                       "~/Scripts/Directives/modalDialog.js",
@@ -44,7 +44,7 @@ namespace Kursach3
                       "~/Scripts/Configs/readConfig.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.darkly.css",
+                      "~/Content/bootstrap.css",
                       "~/Content/Site.css",
                       "~/Content/search.css",
                       "~/Content/creative-reader-style.css",
