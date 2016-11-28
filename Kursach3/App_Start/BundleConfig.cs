@@ -44,7 +44,7 @@ namespace Kursach3
                       "~/Scripts/Configs/readConfig.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.darkly.css",
+                      "~/Content/bootstrap.css",
                       "~/Content/Site.css",
                       "~/Content/search.css",
                       "~/Content/creative-reader-style.css",

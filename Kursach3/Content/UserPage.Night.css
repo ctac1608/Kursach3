@@ -23,3 +23,6 @@ div.href-to-add-modal-dialog {
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.search-wrapper .input-holder {
+    background: #00bc8c;
+}
