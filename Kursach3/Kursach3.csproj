@@ -273,11 +273,13 @@
     <Content Include="Content\day-night-ru-en-style.css" />
     <Content Include="Content\Images\add-dark.png" />
     <Content Include="Content\Images\arrow-dark.png" />
+    <Content Include="Content\Images\ban.png" />
     <Content Include="Content\Images\crownNew.png" />
     <Content Include="Content\Images\Day\add.png" />
     <Content Include="Content\Images\Day\add24.png" />
     <Content Include="Content\Images\Day\arrow24.png" />
     <Content Include="Content\Images\Day\close.png" />
+    <Content Include="Content\Images\delete.png" />
     <Content Include="Content\Images\empty.png" />
     <Content Include="Content\Images\FacebookNew.png" />
     <Content Include="Content\Images\Day\pencil.png" />

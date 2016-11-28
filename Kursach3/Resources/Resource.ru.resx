@@ -237,4 +237,10 @@
   <data name="OnRequest" xml:space="preserve">
     <value>по этому запросу</value>
   </data>
+  <data name="BanIt" xml:space="preserve">
+    <value>Забанить</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
 </root>
