@@ -8,6 +8,8 @@
 <div ng-controller="searchPageController">
     
     <div class="popular">
+        {{Search.Result}} @Resources.Resource.OnRequest:
+        @*{{Search.Row}}*@
         <div ng-repeat="creative in user.Creatives" class="creative-in-SearchPage well">
             <p id="name" class="style-for-name">{{creative.Name}}</p>
             <hr />
