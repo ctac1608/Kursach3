@@ -8,12 +8,12 @@
 <div ng-controller="searchPageController">
     
     <div class="popular">
-        <div ng-repeat="user in users" class="creative-in-SearchPage well">
-            <a href="http://localhost:52038/Creative/CreativeReader/#{{user.Creatives[0].Id}}" class="style-for-name">{{user.Creatives[0].Name}}</a>
-        {{Search.Result}} @Resources.Resource.OnRequest:
-        @*{{Search.Row}}*@
+        <div>
+
+         <p class="style-for-result">@Resources.Resource."{{search.Result}}"</p>
+
             <div ng-repeat="user in users" class="creative-in-SearchPage well">
-                <p id="name" class="style-for-name">{{creative.Name}}</p>
+                <p id="name" class="style-for-name"><a href="http://localhost:52038/Creative/CreativeReader/#{{user.Creatives[0].Id}}" class="style-for-name">{{user.Creatives[0].Name}}</a></p>
                 <hr />
                 <div id="link-for-name" class="position-link">
                     <a href="http://localhost:52038/UserPage/Index/{{user.Id}}" class="date">{{user.Login}}</a>
@@ -24,3 +24,4 @@
             </div>
     </div>
  </div>
+</div>

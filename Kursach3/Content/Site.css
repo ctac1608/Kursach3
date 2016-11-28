@@ -44,6 +44,7 @@ textarea {
 }
 .between-cloud-and-panel{
     clear:both;
+    margin-bottom: 0;
 }
 .creative-in-SearchPage{
     width:70%;
@@ -56,4 +57,9 @@ textarea {
 }
 .vertical-indent{
     margin-top: 40px;
+}
+p.style-for-result{
+    font-size: 15pt;
+    margin-top:  30px;
+    text-align:center;
 }
