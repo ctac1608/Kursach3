@@ -234,4 +234,7 @@
   <data name="ChangeYourPassword" xml:space="preserve">
     <value>Change your password</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
 </root>

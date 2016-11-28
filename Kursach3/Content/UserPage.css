@@ -24,7 +24,7 @@ a.setting {
     height: 32px;
     float: left;
     position: relative;
-    background-image: url("../Content/Images/Day/pencil.png");
+    /*background-image: url("../Content/Images/Day/pencil.png");*/
 }
 
 #medal {
@@ -65,6 +65,8 @@ a.setting {
 }
 
 #add {
+    width: 32px;
+    height: 32px;
     margin-left: 20px;
     cursor: pointer;
 }
@@ -98,7 +100,9 @@ a.setting {
 
 #add-dialog {
     width: 32px;
-    float: left;
+    height: 32px;
+    float: left;    
+    cursor: pointer;
 }
 
 .form-module{
@@ -128,9 +132,8 @@ a.setting {
 .position-tags-in-UserPage{
     margin-top: 10px;
 }
-.background-color-modal-dialog{
-    background-color: #00bc8c;
-}
-.ng-modal-dialog {
-    background-color: #00bc8c;
+.margin-top-in-buttons{
+    margin-top:8px;
+    float:left;
+    
 }
